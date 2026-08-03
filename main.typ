@@ -2,7 +2,8 @@
 #let accounting = include "chapters/02-accounting.typ"
 #let costing = include "chapters/03-costing.typ"
 
-#let my-stylesheet = html.elem("link", attrs: (rel: "stylesheet", href: "static/style.css"))
+// its in root of `dist/`
+#let my-stylesheet = html.elem("link", attrs: (rel: "stylesheet", href: "style.css"))
 
 #document("index.html", title: [Example Book])[
   #my-stylesheet
