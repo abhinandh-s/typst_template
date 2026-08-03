@@ -1,5 +1,20 @@
-/* --- 1. Mocha (Default) --- */
-:root, :root[data-theme="mocha"] {
+/* --- Default --- */
+:root, :root[data-theme="tomato"] {
+  --ctp-base: #1e1e2e;
+  --ctp-mantle: #181825;
+  --ctp-text: #cdd6f4;
+  --ctp-subtext0: #a6adc8;
+  --ctp-surface0: #313244;
+  --ctp-surface1: #45475a;
+  --ctp-mauve: #cba6f7;
+  --ctp-blue: #8caaee;
+  --ctp-sapphire: #74c7ec;
+  --ctp-peach: #fab387;
+  --ctp-green: #a6e3a1;
+  --ctp-red: #f38ba8;
+}
+
+:root[data-theme="mocha"] {
   --ctp-base: #1e1e2e;
   --ctp-mantle: #181825;
   --ctp-text: #cdd6f4;
@@ -120,13 +135,13 @@ blockquote {
   padding: 0.6rem 1.2rem;
   border-radius: 8px;
   font-size: 1rem;
+  border: 2px solid var(--ctp-surface1);
   */
   position: fixed;
   top: 20px;
   left: 20px;
   background-color: var(--ctp-surface0);
   color: var(--ctp-text);
-  border: 2px solid var(--ctp-surface1);
   font-weight: bold;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
