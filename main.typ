@@ -4,6 +4,8 @@
 
 // its in root of `dist/`
 #let my-stylesheet = html.elem("link", attrs: (rel: "stylesheet", href: "style.css"))
+// just for path relsove
+#let chapter-stylesheet = html.elem("link", attrs: (rel: "stylesheet", href: "../style.css"))
 
 #let theme-switcher-script = html.script("
   // Define themes array
@@ -42,7 +44,7 @@
 #let theme-button = html.button(id: "theme-toggle", class: "theme-btn")[Theme: Mocha]
 
 #let theme = [
-  #my-stylesheet
+  #chapter-stylesheet
   // Add the script and button
   #theme-switcher-script
   #theme-button
