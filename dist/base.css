@@ -2,8 +2,8 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   line-height: 1.7;
-  color: var(--ctp-text);
-  background-color: var(--ctp-base);
+  color: var(--fg);
+  background-color: var(--bg);
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
@@ -31,9 +31,9 @@ li::marker { color: var(--ctp-peach); }
 
 /* --- Links --- */
 a {
-  color: var(--ctp-blue);
+  color: var(--accent);
   text-decoration: none;
-  border-bottom: 1px dashed var(--ctp-blue);
+  border-bottom: 1px dashed var(--accent);
   transition: all 0.2s ease-in-out;
 }
 a:hover {
