@@ -26,8 +26,7 @@ variable cost is ₹20 per unit.
 
 If the factory produces 5,000 units:
 
-$ "Total Cost"
-  = "Fixed Cost" + "Variable Cost" $
+$ "Total Cost" = "Fixed Cost" + "Variable Cost" $
 
 $ = 100000 + (20 times 5000) $
 
