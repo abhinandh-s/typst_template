@@ -7,7 +7,7 @@
 
 #let theme-switcher-script = html.script("
   // Define themes array
-  const themes = ['tomato', 'mocha', 'macchiato', 'frappe', 'latte'];
+  const themes = ['tomato', 'latte', 'mocha', 'macchiato', 'frappe'];
   
   // Get saved theme or default to Mocha
   let currentTheme = localStorage.getItem('catppuccin-theme') || 'tomato';
