@@ -7,10 +7,10 @@
 
 #let theme-switcher-script = html.script("
   // Define themes array
-  const themes = ['mocha', 'macchiato', 'frappe', 'latte'];
+  const themes = ['tomato', 'mocha', 'macchiato', 'frappe', 'latte'];
   
   // Get saved theme or default to Mocha
-  let currentTheme = localStorage.getItem('catppuccin-theme') || 'mocha';
+  let currentTheme = localStorage.getItem('catppuccin-theme') || 'tomato';
   
   // Apply it instantly to avoid flashing white screens
   document.documentElement.setAttribute('data-theme', currentTheme);
