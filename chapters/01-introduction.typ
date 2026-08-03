@@ -22,7 +22,7 @@ The same files can also be exported as separate HTML pages.
 
 Suppose we have the following equation:
 
-$ revenue = price times quantity $
+$ "Revenue" = "Price" times "Quantity" $
 
 This equation will appear in both the PDF and HTML versions.
 
