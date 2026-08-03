@@ -1,0 +1,51 @@
+/* --- Base Layout & Typography --- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--ctp-text);
+  background-color: var(--ctp-base);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--ctp-mauve);
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+h1 { font-size: 2.25rem; border-bottom: 2px solid var(--ctp-surface1); padding-bottom: 0.5rem; }
+h2 { font-size: 1.75rem; color: var(--ctp-sapphire); }
+h3 { font-size: 1.5rem; }
+
+/* --- Paragraphs & Lists --- */
+p, ul, ol { margin-bottom: 1.5rem; }
+ul, ol { padding-left: 2rem; }
+li { margin-bottom: 0.5rem; }
+li::marker { color: var(--ctp-peach); }
+
+/* --- Links --- */
+a {
+  color: var(--ctp-blue);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--ctp-blue);
+  transition: all 0.2s ease-in-out;
+}
+a:hover {
+  color: var(--ctp-green);
+  border-bottom: 1px solid var(--ctp-green);
+}
+
+/* --- Misc Text Elements --- */
+strong { color: var(--ctp-red); font-weight: 600; }
+blockquote {
+  margin: 1.5rem 0; padding: 0.5rem 1.5rem;
+  border-left: 4px solid var(--ctp-mauve);
+  background-color: var(--ctp-mantle);
+  font-style: italic; color: var(--ctp-subtext0);
+}
