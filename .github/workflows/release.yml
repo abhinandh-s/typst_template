@@ -20,7 +20,7 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     env:
-      TYPST_FEATURES: "bundle"
+      TYPST_FEATURES: "bundle,html"
     permissions:
       contents: write
 
