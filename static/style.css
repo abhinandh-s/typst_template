@@ -117,8 +117,8 @@ blockquote {
 /* --- Theme Toggle Button --- */
 .theme-btn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  top: 20px;
+  left: 20px;
   background-color: var(--ctp-surface0);
   color: var(--ctp-text);
   border: 2px solid var(--ctp-surface1);
