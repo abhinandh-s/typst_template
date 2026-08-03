@@ -20,9 +20,9 @@
 
 /* --- Mocha --- */
 :root[data-theme="mocha"] {
-  --bg: #0B0706;
-  --fg: #bcbdd0;
-  --accent: #e05060;
+  --bg: #1e1e2e;
+  --fg: #cdd6f4;
+  --accent: #f38ba8;
 
   --ctp-base: #1e1e2e;
   --ctp-mantle: #181825;
@@ -40,6 +40,10 @@
 
 /* --- Macchiato --- */
 :root[data-theme="macchiato"] {
+  --bg: #24273a;
+  --fg: #cad3f5;
+  --accent: #ed8796;
+
   --ctp-base: #24273a;
   --ctp-mantle: #1e2030;
   --ctp-text: #cad3f5;
@@ -56,6 +60,10 @@
 
 /* --- Frappé --- */
 :root[data-theme="frappe"] {
+  --bg: #303446;
+  --fg: #c6d0f5;
+  --accent: #e78284;
+
   --ctp-base: #303446;
   --ctp-mantle: #292c3c;
   --ctp-text: #c6d0f5;
@@ -72,6 +80,10 @@
 
 /* --- Latte (Light Mode) --- */
 :root[data-theme="latte"] {
+  --bg: #eff1f5;
+  --fg: #4c4f69;
+  --accent: #d20f39;
+
   --ctp-base: #eff1f5;
   --ctp-mantle: #e6e9ef;
   --ctp-text: #4c4f69;
