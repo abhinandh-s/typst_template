@@ -1,20 +1,9 @@
-// ------------------------------------
-// Shared chapter content
-// ------------------------------------
-
 #let introduction = include "chapters/01-introduction.typ"
 #let accounting = include "chapters/02-accounting.typ"
 #let costing = include "chapters/03-costing.typ"
 
 
-// ------------------------------------
-// HTML website
-// ------------------------------------
-
-#document(
-  "index.html",
-  title: [Example Book],
-)[
+#document("index.html", title: [Example Book])[
   #title()
 
   This is the online version of *Example Book*.
@@ -31,20 +20,14 @@
 ]
 
 
-#document(
-  "chapters/introduction.html",
-  title: [Introduction],
-)[
+#document("chapters/introduction.html", title: [Introduction])[
   #introduction
 
   #link(<html-accounting>)[Next: Accounting Fundamentals →]
 ] <html-introduction>
 
 
-#document(
-  "chapters/accounting.html",
-  title: [Accounting Fundamentals],
-)[
+#document("chapters/accounting.html", title: [Accounting Fundamentals])[
   #link(<html-introduction>)[← Previous: Introduction]
 
   #accounting
@@ -53,19 +36,11 @@
 ] <html-accounting>
 
 
-#document(
-  "chapters/costing.html",
-  title: [Introduction to Costing],
-)[
+#document("chapters/costing.html", title: [Introduction to Costing])[
   #link(<html-accounting>)[← Previous: Accounting Fundamentals]
 
   #costing
 ] <html-costing>
-
-
-// ------------------------------------
-// Complete PDF
-// ------------------------------------
 
 #document(
   "book.pdf",
