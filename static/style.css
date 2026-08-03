@@ -1,0 +1,15 @@
+a {
+    color: #e05060;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e05060;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #e05060;
+}   
