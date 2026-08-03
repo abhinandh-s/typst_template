@@ -53,8 +53,9 @@
 #document("index.html", title: [Example Book])[
   #my-stylesheet
   // Add the script and button
-  #theme-switcher-script
-  #theme-button
+  #html.script(src: "theme.js")
+  #html.button(id: "theme-toggle", class: "theme-btn")[Theme: Tomato]
+
 
   #title()
 
@@ -122,5 +123,5 @@
 #asset("variables.css", read("static/variables.css"))
 #asset("base.css", read("static/base.css"))
 #asset("components.css", read("static/components.css"))
-
+#asset("theme.js", read("static/theme.js")) 
 #asset("favicon.ico", read("images/favicon.ico", encoding: none))
