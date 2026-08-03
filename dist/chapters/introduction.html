@@ -72,4 +72,35 @@ mover[accent="true" i] > :not(:first-child) {
   math-depth: inherit;
   math-style: inherit;
   math-shift: inherit;
-}</style></head><body><h2 id="introduction">Introduction</h2><p>This book demonstrates how a single Typst project can produce both a complete PDF book and a multi-page HTML website.</p><h3 id="loc-1">Why use Typst?</h3><p>Typst allows us to keep the actual content separate from the way that content is exported.</p><p>For example, we can write:</p><ul><li>Chapter 1 in one file</li><li>Chapter 2 in another file</li><li>Chapter 3 in another file</li></ul><p>and combine all of them into one PDF.</p><p>The same files can also be exported as separate HTML pages.</p><h3 id="loc-2">A small example</h3><p>Suppose we have the following equation:</p><math display="block"><mtext>Revenue</mtext><mo>=</mo><mtext>Price</mtext><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mtext>Quantity</mtext></math><p>This equation will appear in both the PDF and HTML versions.</p><h3 id="loc-3">Next chapter</h3><p>The next chapter introduces some basic accounting concepts. <a href="accounting.html">Next: Accounting Fundamentals →</a></p></body></html>
+}</style></head><body><link rel="stylesheet" href="style.css"><script>
+  // Define themes array
+  const themes = ['tomato', 'latte', 'mocha', 'macchiato', 'frappe'];
+  
+  // Get saved theme or default to Mocha
+  let currentTheme = localStorage.getItem('catppuccin-theme') || 'tomato';
+  
+  // Apply it instantly to avoid flashing white screens
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  // The function to cycle themes when button is clicked
+  function toggleTheme() {
+    let index = themes.indexOf(currentTheme);
+    currentTheme = themes[(index + 1) % themes.length];
+    
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    localStorage.setItem('catppuccin-theme', currentTheme);
+    
+    // Update button text
+    const btn = document.getElementById('theme-toggle');
+    if(btn) btn.innerText = 'Theme: ' + currentTheme.charAt(0).toUpperCase() + currentTheme.slice(1);
+  }
+
+  // Hook up the button after the page loads
+  window.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+        btn.innerText = 'Theme: ' + currentTheme.charAt(0).toUpperCase() + currentTheme.slice(1);
+        btn.onclick = toggleTheme;
+    }
+  });
+</script><p><button id="theme-toggle" class="theme-btn">Theme: Mocha</button></p><h2 id="introduction">Introduction</h2><p>This book demonstrates how a single Typst project can produce both a complete PDF book and a multi-page HTML website.</p><h3 id="loc-1">Why use Typst?</h3><p>Typst allows us to keep the actual content separate from the way that content is exported.</p><p>For example, we can write:</p><ul><li>Chapter 1 in one file</li><li>Chapter 2 in another file</li><li>Chapter 3 in another file</li></ul><p>and combine all of them into one PDF.</p><p>The same files can also be exported as separate HTML pages.</p><h3 id="loc-2">A small example</h3><p>Suppose we have the following equation:</p><math display="block"><mtext>Revenue</mtext><mo>=</mo><mtext>Price</mtext><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo><mtext>Quantity</mtext></math><p>This equation will appear in both the PDF and HTML versions.</p><h3 id="loc-3">Next chapter</h3><p>The next chapter introduces some basic accounting concepts. <a href="accounting.html">Next: Accounting Fundamentals →</a></p></body></html>
