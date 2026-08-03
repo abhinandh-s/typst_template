@@ -41,6 +41,13 @@
 // The HTML Button element
 #let theme-button = html.button(id: "theme-toggle", class: "theme-btn")[Theme: Mocha]
 
+#let theme = [
+  #my-stylesheet
+  // Add the script and button
+  #theme-switcher-script
+  #theme-button
+]
+
 #document("index.html", title: [Example Book])[
   #my-stylesheet
   // Add the script and button
@@ -64,12 +71,14 @@
 
 
 #document("chapters/introduction.html", title: [Introduction])[
+  #theme
   #introduction
   #link(<html-accounting>)[Next: Accounting Fundamentals →]
 ] <html-introduction>
 
 
 #document("chapters/accounting.html", title: [Accounting Fundamentals])[
+  #theme
   #link(<html-introduction>)[← Previous: Introduction]
   #accounting
   #link(<html-costing>)[Next: Introduction to Costing →]
@@ -77,6 +86,7 @@
 
 
 #document("chapters/costing.html", title: [Introduction to Costing])[
+  #theme
   #link(<html-accounting>)[← Previous: Accounting Fundamentals]
   #costing
 ] <html-costing>
