@@ -77,7 +77,7 @@ jobs:
           tag_name: ${{ steps.date.outputs.timestamp }}
           name: "Release: ${{ steps.date.outputs.timestamp }}"
           body: "Automated build for commit ${{ github.sha }}"
-          files: dist/blog.pdf # <-- 02 change output name
+          files: dist/output.pdf # <-- 02 change output name
 
           generate_release_notes: true
         env:
