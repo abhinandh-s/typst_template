@@ -41,7 +41,7 @@ jobs:
       
       - uses: typst-community/setup-typst@v4
       # Now Typst is installed!
-      - run: typst compile main.typ output.pdf # <-- 01 change output name: 
+      #- run: typst compile main.typ output.pdf # <-- 01 change output name: 
      
       - name: Run typst bundle
         run: typst compile --format bundle main.typ output.pdf
