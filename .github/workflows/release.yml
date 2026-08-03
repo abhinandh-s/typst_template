@@ -38,12 +38,12 @@ jobs:
       #- run: typst compile main.typ output.pdf # <-- 01 change output name: 
      
       - name: Run typst bundle
-        run: typst compile main.typ --format bundle
+        run: typst compile main.typ dist --format bundle
       
       - name: List output
         run: |
           ls
-          ls main/
+          ls dist/
           
       # 1. Generate the timestamp for the tag
       - name: Get current time
@@ -57,7 +57,7 @@ jobs:
           tag_name: ${{ steps.date.outputs.timestamp }}
           name: "Release: ${{ steps.date.outputs.timestamp }}"
           body: "Automated build for commit ${{ github.sha }}"
-          files: output.pdf # <-- 02 change output name
+          files: dist/blog.pdf # <-- 02 change output name
 
           generate_release_notes: true
         env:
