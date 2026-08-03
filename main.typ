@@ -5,7 +5,7 @@
 
 #document("blog.html", include "blog.typ")[
   #title()
-  #body()
+  
   This blog also exists as a
   #link(<blog-pdf>)[single PDF].
 ] <blog>
