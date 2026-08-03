@@ -42,18 +42,10 @@
   #costing
 ] <html-costing>
 
-#document(
-  "book.pdf",
-  title: [Example Book],
-)[
-  #set page(
-    paper: "a4",
-    margin: 2.5cm,
-  )
+#document("book.pdf", title: [Example Book])[
+  #set page(paper: "a4", margin: 2.5cm)
 
-  #set text(
-    size: 11pt,
-  )
+  #set text(size: 11pt)
 
   #align(center)[
     #text(24pt, weight: "bold")[
@@ -67,9 +59,7 @@
 
   #pagebreak()
 
-  #outline(
-    title: [Contents],
-  )
+  #outline(title: [Contents])
 
   #pagebreak()
 
@@ -84,12 +74,4 @@
   #costing
 ] <book-pdf>
 
-
-// ------------------------------------
-// Assets
-// ------------------------------------
-
-#asset(
-  "favicon.ico",
-  read("images/favicon.ico", encoding: none),
-)
+#asset("favicon.ico", read("images/favicon.ico", encoding: none))
