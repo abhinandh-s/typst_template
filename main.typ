@@ -1,44 +1,120 @@
-#let blog = [
-  Welcome to my blog!
+// ------------------------------------
+// Shared chapter content
+// ------------------------------------
 
-  In this report, we will explore the
-  various factors that influence fluid
-  dynamics in glaciers and how they
-  contribute to the formation and
-  behaviour of these natural structures.
+#let introduction = include "chapters/01-introduction.typ"
+#let accounting = include "chapters/02-accounting.typ"
+#let costing = include "chapters/03-costing.typ"
 
-  = Introduction
 
-  In this report, we will explore the
-  various factors that influence _fluid
-  dynamics_ in glaciers and how they
-  contribute to the formation and
-  behaviour of these natural structures.
+// ------------------------------------
+// HTML website
+// ------------------------------------
 
-  + The climate
-    - Temperature
-    - Precipitation
-  + The topography
-  + The geology
+#document(
+  "index.html",
+  title: [Example Book],
+)[
+  #title()
+
+  This is the online version of *Example Book*.
+
+  == Chapters
+
+  - #link(<html-introduction>)[Introduction]
+  - #link(<html-accounting>)[Accounting Fundamentals]
+  - #link(<html-costing>)[Introduction to Costing]
+
+  == Other formats
+
+  #link(<book-pdf>)[Download the complete book as PDF.]
 ]
 
-#document("index.html", title: [Home])[
-  #title()
 
-  - #link(<blog>)[Go to blog]
-]
+#document(
+  "chapters/introduction.html",
+  title: [Introduction],
+)[
+  #introduction
 
-#document("blog.html", title: [Blog])[
-  #title()
+  #link(<html-accounting>)[Next: Accounting Fundamentals →]
+] <html-introduction>
 
-  #blog
 
-  This blog also exists as a
-  #link(<blog-pdf>)[single PDF].
-] <blog>
+#document(
+  "chapters/accounting.html",
+  title: [Accounting Fundamentals],
+)[
+  #link(<html-introduction>)[← Previous: Introduction]
 
-#document("blog.pdf", title: [Blog])[
-  #title()
+  #accounting
 
-  #blog
-] <blog-pdf>
+  #link(<html-costing>)[Next: Introduction to Costing →]
+] <html-accounting>
+
+
+#document(
+  "chapters/costing.html",
+  title: [Introduction to Costing],
+)[
+  #link(<html-accounting>)[← Previous: Accounting Fundamentals]
+
+  #costing
+] <html-costing>
+
+
+// ------------------------------------
+// Complete PDF
+// ------------------------------------
+
+#document(
+  "book.pdf",
+  title: [Example Book],
+)[
+  #set page(
+    paper: "a4",
+    margin: 2.5cm,
+  )
+
+  #set text(
+    size: 11pt,
+  )
+
+  #align(center)[
+    #text(24pt, weight: "bold")[
+      Example Book
+    ]
+
+    #v(1em)
+
+    A demonstration book built with Typst.
+  ]
+
+  #pagebreak()
+
+  #outline(
+    title: [Contents],
+  )
+
+  #pagebreak()
+
+  #introduction
+
+  #pagebreak()
+
+  #accounting
+
+  #pagebreak()
+
+  #costing
+] <book-pdf>
+
+
+// ------------------------------------
+// Assets
+// ------------------------------------
+
+#asset(
+  "favicon.ico",
+  read("images/favicon.ico", encoding: none),
+)
