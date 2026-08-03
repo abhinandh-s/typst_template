@@ -19,6 +19,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    env:
+      TYPST_FEATURES: "bundle"
     permissions:
       contents: write
 
@@ -39,8 +41,11 @@ jobs:
       
       - uses: typst-community/setup-typst@v4
       # Now Typst is installed!
-      - run: typst compile main.typ output.pdf # <-- 01 change output name
-
+      - run: typst compile main.typ output.pdf # <-- 01 change output name: 
+     
+      - name: Run typst bundle
+        run: typst compile --format bundle main.typ output.pdf
+        
       # 1. Generate the timestamp for the tag
       - name: Get current time
         id: date
