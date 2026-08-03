@@ -8,7 +8,7 @@ transactions.
 
 The basic accounting equation is:
 
-$ Assets = Liabilities + Equity $
+$ "Assets" = "Liabilities" + "Equity" $
 
 For example, suppose a business has:
 
