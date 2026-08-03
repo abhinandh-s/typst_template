@@ -1,5 +1,9 @@
 /* --- Tomato (Default) --- */
-:root, :root[data-theme="mocha"] {
+:root, :root[data-theme="tomato"] {
+  --bg: #0B0706;
+  --fg: #bcbdd0;
+  --accent: #e05060;
+
   --ctp-base: #1e1e2e;
   --ctp-mantle: #181825;
   --ctp-text: #cdd6f4;
@@ -16,6 +20,10 @@
 
 /* --- Mocha --- */
 :root[data-theme="mocha"] {
+  --bg: #0B0706;
+  --fg: #bcbdd0;
+  --accent: #e05060;
+
   --ctp-base: #1e1e2e;
   --ctp-mantle: #181825;
   --ctp-text: #cdd6f4;
