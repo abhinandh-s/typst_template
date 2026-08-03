@@ -50,6 +50,17 @@ jobs:
         id: date
         run: echo "timestamp=$(date +'%Y.%m.%d-%H%M')" >> $GITHUB_OUTPUT
 
+        
+      - name: Commit generated files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        # Adding continue-on-error temporarily so the workflow doesn't fail 
+        # while we are just trying to read the tree output!
+        continue-on-error: true 
+        with:
+          commit_message: "chore: compile typst to bundle"
+          add_options: '-f'
+          file_pattern: 'dist/' 
+
       # 2. Use the timestamp as the tag
       - name: Create Release
         uses: softprops/action-gh-release@v2
