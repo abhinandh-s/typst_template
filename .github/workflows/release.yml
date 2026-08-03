@@ -43,7 +43,7 @@ jobs:
       - name: List output
         run: |
           ls
-          ls assets/
+          ls main/
           
       # 1. Generate the timestamp for the tag
       - name: Get current time
