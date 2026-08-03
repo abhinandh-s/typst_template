@@ -5,8 +5,48 @@
 // its in root of `dist/`
 #let my-stylesheet = html.elem("link", attrs: (rel: "stylesheet", href: "style.css"))
 
+#let theme-switcher-script = html.script("
+  // Define themes array
+  const themes = ['mocha', 'macchiato', 'frappe', 'latte'];
+  
+  // Get saved theme or default to Mocha
+  let currentTheme = localStorage.getItem('catppuccin-theme') || 'mocha';
+  
+  // Apply it instantly to avoid flashing white screens
+  document.documentElement.setAttribute('data-theme', currentTheme);
+
+  // The function to cycle themes when button is clicked
+  function toggleTheme() {
+    let index = themes.indexOf(currentTheme);
+    currentTheme = themes[(index + 1) % themes.length];
+    
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    localStorage.setItem('catppuccin-theme', currentTheme);
+    
+    // Update button text
+    const btn = document.getElementById('theme-toggle');
+    if(btn) btn.innerText = 'Theme: ' + currentTheme.charAt(0).toUpperCase() + currentTheme.slice(1);
+  }
+
+  // Hook up the button after the page loads
+  window.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+        btn.innerText = 'Theme: ' + currentTheme.charAt(0).toUpperCase() + currentTheme.slice(1);
+        btn.onclick = toggleTheme;
+    }
+  });
+")
+
+// The HTML Button element
+#let theme-button = html.button(id: "theme-toggle", class: "theme-btn")[Theme: Mocha]
+
 #document("index.html", title: [Example Book])[
   #my-stylesheet
+  // Add the script and button
+  #theme-switcher-script
+  #theme-button
+
   #title()
 
   This is the online version of *Example Book*.
