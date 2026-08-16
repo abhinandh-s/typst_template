@@ -1,6 +1,6 @@
 const themes = ['dark', 'light'];
-let currentTheme = localStorage.getItem('theme') || 'dark';
-document.documentElement.setAttribute('data-theme', currentTheme);
+
+let currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
 
 function toggleTheme() {
   let index = themes.indexOf(currentTheme);
