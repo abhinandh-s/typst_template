@@ -4,6 +4,10 @@
   #html.button(id: "theme-toggle", class: "theme-btn")[Theme: Tomato]
 ]
 
+#let common = [
+  #include "foreword.typ"
+]
+
 #document("index.html", title: [Home])[
   #theme
   #set heading(numbering: "1.", bookmarked: false)
