@@ -71,7 +71,6 @@
   #pagebreak()
 
   #set heading(numbering: "1.")
-  #outline(title: [Contents])
   #pagebreak()
 
   #introduction
