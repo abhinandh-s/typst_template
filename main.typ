@@ -22,7 +22,6 @@
 
   #title()
   #set heading(numbering: "1.")
-  #outline()
   #foreword
 
   This is the online version of *Example Book*.
