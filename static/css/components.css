@@ -1,6 +1,5 @@
 /* --- Theme Toggle Button --- */
 .theme-btn {
-  position: fixed;
   top: 20px;
   right: 20px;
   background-color: var(--bg);
@@ -24,10 +23,6 @@
 
 /* The Top Navigation Bar */
 .top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
   padding: 10px 20px;
   background: #fff;
   border-bottom: 1px solid #ddd;
@@ -72,7 +67,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  padding-top: 60px; /* Leave room for top bar */
+  padding-top: 20px; /* Leave room for top bar */
   padding-left: 20px;
   padding-right: 20px;
   background: #f9f9f9;
