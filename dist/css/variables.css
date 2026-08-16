@@ -1,5 +1,5 @@
 /* --- Dark (Default) --- */
-:root, :root[data-theme="tomato"] {
+:root, :root[data-theme="dark"] {
   --bg: #0B0706;
   --fg: #bcbdd0;
   --sidebar-bg: #181010;
@@ -22,7 +22,7 @@
 
 
 /* --- Light Mode --- */
-:root[data-theme="latte"] {
+:root[data-theme="light"] {
   --bg: #eff1f5;
   --fg: #4c4f69;
   --sidebar-bg: #292c2f;
