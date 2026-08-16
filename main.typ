@@ -80,7 +80,7 @@ This guide also exists as a
 #html-page("chapter-01.html", [Chapter 01])[
   #title()
   #include "chapters/chapter-01.typ"
-  #nav(<ch1>, <ch2>)
+  #nav(<foreword>, <ch2>)
 ] <ch1>
 
 #html-page("chapter-02.html", [Chapter 2])[
