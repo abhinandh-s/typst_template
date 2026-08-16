@@ -18,12 +18,6 @@
 
   This is the online version of *Example Book*.
 
-  == Chapters
-
-  - #link(<html-introduction>)[Introduction]
-  - #link(<html-accounting>)[Accounting Fundamentals]
-  - #link(<html-costing>)[Introduction to Costing]
-
   == Other formats
 
   #link(<book-pdf>)[Download the complete book as PDF.]
