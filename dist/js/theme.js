@@ -1,5 +1,5 @@
-const themes = ['tomato', 'latte', 'mocha', 'macchiato', 'frappe'];
-let currentTheme = localStorage.getItem('theme') || 'tomato';
+const themes = ['dark', 'light'];
+let currentTheme = localStorage.getItem('theme') || 'dark';
 document.documentElement.setAttribute('data-theme', currentTheme);
 
 function toggleTheme() {
