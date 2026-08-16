@@ -11,7 +11,7 @@
     #html.button(id: "sidebar-toggle", class: "btn")[
       #html.elem("span", attrs: (class: "material-symbols-outlined"))[menu]
     ]
-    #html.button(id: "theme-toggle", class: "btn")[
+    #html.button(id: "theme-toggle", class: "theme-btn")[
       #html.elem("span", attrs: (class: "material-symbols-outlined"))[palette]
     ]
   ]
