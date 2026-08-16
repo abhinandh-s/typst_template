@@ -42,6 +42,26 @@
   ]
 }
 
+#let prev(target) = link(target)[
+  #html.elem("div", attrs: (class: "nav-btn"))[
+    #html.elem("span", attrs: (class: "material-symbols-outlined"))[keyboard_double_arrow_left]
+  ]
+]
+
+#let next(target) = link(target)[
+  #html.elem("div", attrs: (class: "nav-btn"))[
+    #html.elem("span", attrs: (class: "material-symbols-outlined"))[keyboard_double_arrow_right]
+  ]
+]
+
+// We use 'none' when there is no prev/next page.
+#let nav(p, n) = html.elem("div", attrs: (class: "bottom-nav"))[
+  // If no previous link, insert an empty span so flexbox still pushes 'next' to the right
+  #if p != none [ #prev(p) ] else [ #html.elem("span")[] ]
+  #if n != none [ #next(n) ] else [ #html.elem("span")[] ]
+]
+
+
 #html-page("index.html", [Home])[
   #title()
   #outline(target: heading.where(bookmarked: false, outlined: true))
