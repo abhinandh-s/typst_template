@@ -10,4 +10,4 @@ The diagrams presented in this document is hereby granted to the public domain, 
 
 Educators are freely encouraged to recommend or supply copies of this guide to their students.
 
-Contact abhinandhsuby@proton.me for more information.
+Contact #link[abhinandhsuby@proton.me] for more information.
