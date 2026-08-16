@@ -1,6 +1,6 @@
 #let theme = [
-  #html.elem("link", attrs: (rel: "stylesheet", href: "style.css"))
-  #html.script(src: "theme.js")
+  #html.elem("link", attrs: (rel: "stylesheet", href: "css/style.css"))
+  #html.script(src: "js/theme.js")
   #html.button(id: "theme-toggle", class: "theme-btn")[Theme: Tomato]
 ]
 
@@ -50,9 +50,9 @@
 
 
 // Export these into the output bundle
-#asset("style.css", read("/static/style.css"))
-#asset("variables.css", read("/static/variables.css"))
-#asset("base.css", read("/static/base.css"))
-#asset("components.css", read("/static/components.css"))
-#asset("theme.js", read("/static/theme.js")) 
+#asset("css/style.css", read("/static/css/style.css"))
+#asset("css/variables.css", read("/static/css/variables.css"))
+#asset("css/base.css", read("/static/css/base.css"))
+#asset("css/components.css", read("/static/components.css"))
+#asset("js/theme.js", read("/static/theme.js")) 
 #asset("favicon.ico", read("/images/favicon.ico", encoding: none))
