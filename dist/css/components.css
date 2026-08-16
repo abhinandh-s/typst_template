@@ -74,3 +74,42 @@ body.sidebar-toggled #sidebar {
   box-sizing: border-box;
   transition: transform 0.3s ease;
 }
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--ctp-surface1, #ddd); /* Subtle divider line */
+}
+
+/* Typst wraps the buttons in an <a> tag. We need to remove default link styling */
+.bottom-nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  background-color: var(--ctp-surface1, #f0f0f0);
+  border-radius: 8px;
+  color: var(--fg, #333);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.nav-btn:hover {
+  /* Slightly darker background on hover */
+  background-color: #dcdcdc; 
+  transform: scale(1.05); /* Slight pop effect */
+}
+
+/* Fix hover background specifically for Dark Mode if using the light/dark setup */
+[data-theme="dark"] .nav-btn:hover {
+  background-color: #45475a; 
+}
+
