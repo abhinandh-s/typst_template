@@ -1,4 +1,13 @@
+#let theme = [
+  #html.elem("link", attrs: (rel: "stylesheet", href: "../style.css"))
+  #html.script(src: "../theme.js")
+  #html.button(id: "theme-toggle", class: "theme-btn")[Theme: Tomato]
+]
+
 #document("index.html", title: [Home])[
+  #html.elem("link", attrs: (rel: "stylesheet", href: "style.css"))
+  #html.script(src: "theme.js")
+  #html.button(id: "theme-toggle", class: "theme-btn")[Theme: Tomato]
   #set heading(numbering: "1.", bookmarked: false)
   #title()
   #outline(target: heading.where(bookmarked: false, outlined: true))
@@ -7,6 +16,7 @@
 ]
 
 #document("chapter-01.html", title: [Blog])[
+  #theme
   #set heading(bookmarked: false)
   
   #title()
@@ -17,6 +27,7 @@
 
 
 #document("chapter-02.html", title: [Chapter 2])[
+  #theme
   #set heading(bookmarked: false)
   #include "chapters/chapter-02.typ"
 ]
