@@ -10,7 +10,7 @@
   #set heading(bookmarked: false)
   
   #title()
-  #include "chapter-01.typ"
+  #include "chapters/chapter-01.typ"
   This blog also exists as a
   #link(<blog-pdf>)[single PDF].
 ] <blog>
@@ -18,7 +18,7 @@
 
 #document("chapter-02.html", title: [Chapter 2])[
   #set heading(bookmarked: false)
-  #include "chapter-02.typ"
+  #include "chapters/chapter-02.typ"
 ]
 
 #document("book.pdf", title: [Full Book])[
@@ -34,16 +34,16 @@
   #set heading(bookmarked: true)
   #outline(target: heading.where(bookmarked: true, outlined: true))
   
-  #include "chapter-01.typ"
-  #include "chapter-02.typ"
+  #include "chapters/chapter-01.typ"
+  #include "chapters/chapter-02.typ"
 ] <blog-pdf>
 
 
 
 // Export these into the output bundle
-#asset("style.css", read("../static/style.css"))
-#asset("variables.css", read("../static/variables.css"))
-#asset("base.css", read("../static/base.css"))
-#asset("components.css", read("../static/components.css"))
-#asset("theme.js", read("../static/theme.js")) 
-#asset("favicon.ico", read("../images/favicon.ico", encoding: none))
+#asset("style.css", read("/static/style.css"))
+#asset("variables.css", read("/static/variables.css"))
+#asset("base.css", read("/static/base.css"))
+#asset("components.css", read("/static/components.css"))
+#asset("theme.js", read("/static/theme.js")) 
+#asset("favicon.ico", read("/images/favicon.ico", encoding: none))
