@@ -16,6 +16,7 @@
 
 
   #title()
+  #outline()
 
   This is the online version of *Example Book*.
 
