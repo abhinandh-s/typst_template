@@ -41,9 +41,9 @@
 
 
 // Export these into the output bundle
-#asset("style.css", read("static/style.css"))
-#asset("variables.css", read("static/variables.css"))
-#asset("base.css", read("static/base.css"))
-#asset("components.css", read("static/components.css"))
-#asset("theme.js", read("static/theme.js")) 
-#asset("favicon.ico", read("images/favicon.ico", encoding: none))
+#asset("style.css", read("../static/style.css"))
+#asset("variables.css", read("../static/variables.css"))
+#asset("base.css", read("../static/base.css"))
+#asset("components.css", read("../static/components.css"))
+#asset("theme.js", read("../static/theme.js")) 
+#asset("favicon.ico", read("../images/favicon.ico", encoding: none))
