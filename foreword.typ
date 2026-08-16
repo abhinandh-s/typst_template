@@ -1,2 +1,4 @@
 = Foreword
 
+#include "copyright.typ"
+
