@@ -1,7 +1,7 @@
 #document("index.html", title: [Home])[
 #title()
 #set heading(numbering: "1.")
-#outline()
+#outline(target: heading.where(outlinable: true))
 
 #link(<blog>)[Go to blog]
 ]
