@@ -1,79 +1,69 @@
-#let web-theme(rel-path: "./") = [
-  #html.elem("link", attrs: (rel: "stylesheet", href: rel-path + "style.css"))
-  #html.elem("link", attrs: (rel: "stylesheet", href: rel-path + "variables.css"))
-  #html.elem("link", attrs: (rel: "stylesheet", href: rel-path + "base.css"))
-  #html.elem("link", attrs: (rel: "stylesheet", href: rel-path + "components.css"))
-  #html.script(src: rel-path + "theme.js")
+#let theme = [
+  #html.elem("link", attrs: (rel: "stylesheet", href: "../style.css"))
+  #html.script(src: "../theme.js")
   #html.button(id: "theme-toggle", class: "theme-btn")[Theme: Tomato]
 ]
 
-// ==========================================
-// HTML Pages
-// ==========================================
-
 #document("index.html", title: [Example Book])[
-  #web-theme(rel-path: "./")
-  
-  #align(center)[
-    = Abhi's Guide to Indian Partnership Act, 1932
-    A simplified study guide
-  ]
+  #html.elem("link", attrs: (rel: "stylesheet", href: "style.css"))
+  // Add the script and button
+  #html.script(src: "theme.js")
+  #html.button(id: "theme-toggle", class: "theme-btn")[Theme: Tomato]
 
+
+  #title()
+  #set heading(numbering: "1.")
+  #outline()
   #include "foreword.typ"
 
-  == Table of Contents
-  - #link(<html-introduction>)[1. Introduction]
-  - #link(<html-accounting>)[2. Accounting Fundamentals]
-  - #link(<html-costing>)[3. Introduction to Costing]
+  This is the online version of *Example Book*.
 
-  == Downloads
-  - #link(<book-pdf>)[Download Full PDF Edition]
+  == Chapters
+
+  - #link(<html-introduction>)[Introduction]
+  - #link(<html-accounting>)[Accounting Fundamentals]
+  - #link(<html-costing>)[Introduction to Costing]
+
+  == Other formats
+
+  #link(<book-pdf>)[Download the complete book as PDF.]
 ]
 
+
 #document("chapters/introduction.html", title: [Introduction])[
-  #web-theme(rel-path: "../")
+  #theme
   #include "chapters/01-introduction.typ"
-  #v(2em)
   #link(<html-accounting>)[Next: Accounting Fundamentals →]
 ] <html-introduction>
 
+
 #document("chapters/accounting.html", title: [Accounting Fundamentals])[
-  #web-theme(rel-path: "../")
-  #link(<html-introduction>)[← Previous: Introduction] | #link(<html-costing>)[Next: Introduction to Costing →]
+  #theme
+  #link(<html-introduction>)[← Previous: Introduction]
   #include "chapters/02-accounting.typ"
+  #link(<html-costing>)[Next: Introduction to Costing →]
 ] <html-accounting>
 
+
 #document("chapters/costing.html", title: [Introduction to Costing])[
-  #web-theme(rel-path: "../")
+  #theme
   #link(<html-accounting>)[← Previous: Accounting Fundamentals]
   #include "chapters/03-costing.typ"
 ] <html-costing>
-
-// ==========================================
-// PDF Book Output
-// ==========================================
 
 #document("book.pdf", title: [Example Book])[
   #set page(paper: "a4", margin: 2.5cm)
   #set text(size: 11pt)
 
   #align(center)[
-    #text(24pt, weight: "bold")[Abhi's Guide to Indian Partnership Act, 1932]
+    #text(24pt, weight: "bold")[Example Book]
     #v(1em)
-    Simplified Revision Notes
+    A demonstration book built with Typst.
   ]
   #pagebreak()
-
-  // Unnumbered Front Matter
-  #include "foreword.typ"
+  #outline()
   #pagebreak()
 
-  // Single Automatic PDF Outline
-  #set heading(numbering: "1.")
-  #outline(title: [Table of Contents], indent: auto)
-  #pagebreak()
-
-  // Main Chapters
   #include "chapters/01-introduction.typ"
   #pagebreak()
 
@@ -83,9 +73,8 @@
   #include "chapters/03-costing.typ"
 ] <book-pdf>
 
-// ==========================================
-// Static Assets
-// ==========================================
+
+// Export these into the output bundle
 #asset("style.css", read("static/style.css"))
 #asset("variables.css", read("static/variables.css"))
 #asset("base.css", read("static/base.css"))
