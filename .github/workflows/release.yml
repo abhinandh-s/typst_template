@@ -32,6 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TYPST_FEATURES: "bundle,html"
+      CREATE_RELEASE: "false"
   
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -54,7 +55,7 @@ jobs:
           ls
           ls dist/
           
-      # 1. Generate the timestamp for the tag
+      # Generate the timestamp for the tag
       - name: Get current time
         id: date
         run: echo "timestamp=$(date +'%Y.%m.%d-%H%M')" >> $GITHUB_OUTPUT
@@ -70,8 +71,9 @@ jobs:
           add_options: '-f'
           file_pattern: 'dist/' 
 
-      # 2. Use the timestamp as the tag
+      # Use the timestamp as the tag
       - name: Create Release
+        if: env.CREATE_RELEASE == 'true' 
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.date.outputs.timestamp }}
