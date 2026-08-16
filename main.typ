@@ -71,10 +71,6 @@
   ]
   #pagebreak()
 
-  #set heading(numbering: "1.")
-  #outline()
-  #pagebreak()
-
   #introduction
   #pagebreak()
 
