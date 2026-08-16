@@ -45,9 +45,7 @@ This is #strike[not] relevant.
 Revenue#sub[yearly]
 
 You can edit Typst documents online.
-#footnote[https://typst.app/app] <fn>
-Checkout Typst's website. @fn
-And the online app. #footnote(<fn>)
+#footnote[https://typst.app/app]
 
 / Ligature: A merged glyph.
 / Kerning: A spacing adjustment
