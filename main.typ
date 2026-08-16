@@ -1,10 +1,10 @@
 #let introduction = include "chapters/01-introduction.typ"
 #let accounting = include "chapters/02-accounting.typ"
 #let costing = include "chapters/03-costing.typ"
-#let forward = include "forward.typ"
+#let foreward = include "foreward.typ"
 
 #let common = [
-  #forward
+  #foreward
 ]
 
 #let theme = [
@@ -23,7 +23,7 @@
   #title()
   #set heading(numbering: "1.")
   #outline()
-  #forward
+  #foreward
 
   This is the online version of *Example Book*.
 
