@@ -22,7 +22,6 @@
   #set heading(bookmarked: false)
   
   #title()
-  #common()
   #include "chapters/chapter-01.typ"
   This blog also exists as a
   #link(<blog-pdf>)[single PDF].
@@ -47,7 +46,8 @@
   #pagebreak()
   #set heading(bookmarked: true)
   #outline(target: heading.where(bookmarked: true, outlined: true))
-  
+
+  #common()
   #include "chapters/chapter-01.typ"
   #include "chapters/chapter-02.typ"
 ] <blog-pdf>
