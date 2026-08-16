@@ -37,16 +37,30 @@
 }
 
 .btn {
+  /* Use inline-flex to perfectly align the icon and text */
+  display: inline-flex;
+  align-items: center;
+  gap: 6px; 
+  
   padding: 8px 12px;
   cursor: pointer;
   background: #f0f0f0;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
 }
 
 .btn:hover {
   background: #e0e0e0;
 }
+
+/* Ensure the icon itself doesn't inherit weird line-heights */
+.material-symbols-outlined {
+  font-size: 18px; /* Slightly larger than the text */
+  line-height: 1;
+}
+
 
 /* 
    Sidebar styling 
