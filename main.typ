@@ -40,7 +40,7 @@
 // pages don't get their own TOC.
 #document("chapter-01.html", title: [Chapter 1: Blog])[
   #heading(outlined: false)[Chapter 1: Blog]
-  #include "chapters/chapter-01.typ"
+  #include "chapter-01.typ"
   #parbreak()
   This blog also exists as a #link(<book-pdf>)[single PDF].
 ] <blog>
@@ -48,7 +48,7 @@
 // ── chapter-02.html ──────────────────────────────────────────────────────
 #document("chapter-02.html", title: [Chapter 2: Pointers])[
   #heading(outlined: false)[Chapter 2: Pointers]
-  #include "chapters/chapter-02.typ"
+  #include "chapter-02.typ"
 ]
 
 // ── book.pdf ─────────────────────────────────────────────────────────────
@@ -65,9 +65,9 @@
       .before(<book-end>),
   )
 
-  #include "chapters/chapter-01.typ"
+  #include "chapter-01.typ"
   #pagebreak()
-  #include "chapters/chapter-02.typ"
+  #include "chapter-02.typ"
 
   #metadata(none) <book-end>
 ] <book-pdf>
