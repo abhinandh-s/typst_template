@@ -10,11 +10,9 @@
   #html.elem("div", attrs: (class: "top-bar"))[
     #html.button(id: "sidebar-toggle", class: "btn")[
       #html.elem("span", attrs: (class: "material-symbols-outlined"))[menu]
-      Menu
     ]
     #html.button(id: "theme-toggle", class: "btn")[
       #html.elem("span", attrs: (class: "material-symbols-outlined"))[palette]
-      Theme: Tomato
     ]
   ]
 ]
