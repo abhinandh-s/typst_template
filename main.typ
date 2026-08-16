@@ -1,22 +1,23 @@
 #let theme = [
   #html.elem("link", attrs: (rel: "stylesheet", href: "css/style.css"))
   #html.script(src: "js/sidebar.js")
+  #html.script(src: "js/theme.js")
   
+  // Google Material Symbols
   #html.elem("link", attrs: (
     rel: "stylesheet", 
     href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
   ))
   
   #html.elem("div", attrs: (class: "top-bar"))[
-    #html.button(id: "sidebar-toggle", class: "btn")[
+    #html.button(id: "sidebar-toggle", class: "btn icon-btn")[
       #html.elem("span", attrs: (class: "material-symbols-outlined"))[menu]
     ]
-    #html.button(id: "theme-toggle", class: "theme-btn")[
+    #html.button(id: "theme-toggle", class: "btn icon-btn")[
       #html.elem("span", attrs: (class: "material-symbols-outlined"))[palette]
     ]
   ]
 ]
-
 
 #let html-page(filename, page-title, body) = {
   document(filename, title: page-title)[
