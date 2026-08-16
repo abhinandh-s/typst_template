@@ -49,19 +49,23 @@
 
 This guide also exists as a
   #link(<book-pdf>)[single PDF].
-]
+  #nav(none, <foreword>)
+] <home>
 
 #html-page("foreword.html", [Foreword])[
   #include "foreword.typ"
-]
+  #nav(<home>, <ch1>)
+] <foreword>
 
 #html-page("chapter-01.html", [Chapter 01])[
   #title()
   #include "chapters/chapter-01.typ"
+  #nav(<ch1>, <ch2>)
 ] <ch1>
 
 #html-page("chapter-02.html", [Chapter 2])[
   #include "chapters/chapter-02.typ"
+  #nav(<ch1>, none)
 ]
 
 #document("ag.pdf", title: [Full Book])[
