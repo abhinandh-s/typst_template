@@ -7,7 +7,6 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
-  display: flex;
   overflow-x: hidden; 
   transition: background-color 0.3s, color 0.3s;
 }
@@ -53,10 +52,6 @@ blockquote {
 
 /* Main Content Area */
 #content {
-  margin-top: 60px; /* Leave room for top bar */
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 20px;
   width: 100%;
   max-width: 800px;
 }
