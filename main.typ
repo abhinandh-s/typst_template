@@ -15,21 +15,25 @@
 #html-page("index.html", [Home])[
   #title()
   #outline(target: heading.where(bookmarked: false, outlined: true))
-  #include "foreword.typ"
   #link(<blog>)[Go to blog]
+
+This guide also exists as a
+  #link(<book-pdf>)[single PDF].
 ]
 
-#html-page("chapter-01.html", [Blog])[
+#html-page("chapter-01.html", [Chapter 01])[
   #title()
   #include "chapters/chapter-01.typ"
-  This blog also exists as a
-  #link(<blog-pdf>)[single PDF].
-] <blog>
+] <ch1>
 
 #html-page("chapter-02.html", [Chapter 2])[
   #include "chapters/chapter-02.typ"
 ]
-#document("book.pdf", title: [Full Book])[
+#html-page("foreword.html", [Foreword])[
+  #include "foreword.typ"
+]
+
+#document("ag.pdf", title: [Full Book])[
   #set page(paper: "a4", margin: 2.5cm)
   #set text(size: 11pt)
 
@@ -41,11 +45,11 @@
   #pagebreak()
   #set heading(bookmarked: true)
   #outline(target: heading.where(bookmarked: true, outlined: true))
-
+  #pagebreak()
   #include "foreword.typ"
   #include "chapters/chapter-01.typ"
   #include "chapters/chapter-02.typ"
-] <blog-pdf>
+] <book-pdf>
 
 // Export these into the output bundle
 #asset("css/style.css", read("/static/css/style.css"))
