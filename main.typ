@@ -1,7 +1,7 @@
-#let introduction = include "chapters/01-introduction.typ"
-#let accounting = include "chapters/02-accounting.typ"
-#let costing = include "chapters/03-costing.typ"
-#let foreword = include "foreword.typ"
+#let introduction() = include "chapters/01-introduction.typ"
+#let accounting() = include "chapters/02-accounting.typ"
+#let costing() = include "chapters/03-costing.typ"
+#let foreword() = include "foreword.typ"
 
 #let common = [
   #foreword
@@ -21,18 +21,12 @@
 
 
   #title()
+This is the online version of *Example Book*.
   #set heading(numbering: "1.")
   #outline()
-  #foreword
+  #foreword()
 
-  This is the online version of *Example Book*.
-
-  == Chapters
-
-  - #link(<html-introduction>)[Introduction]
-  - #link(<html-accounting>)[Accounting Fundamentals]
-  - #link(<html-costing>)[Introduction to Costing]
-
+  
   == Other formats
 
   #link(<book-pdf>)[Download the complete book as PDF.]
@@ -41,7 +35,7 @@
 
 #document("chapters/introduction.html", title: [Introduction])[
   #theme
-  #introduction
+  #introduction()
   #link(<html-accounting>)[Next: Accounting Fundamentals →]
 ] <html-introduction>
 
@@ -49,7 +43,7 @@
 #document("chapters/accounting.html", title: [Accounting Fundamentals])[
   #theme
   #link(<html-introduction>)[← Previous: Introduction]
-  #accounting
+  #accounting()
   #link(<html-costing>)[Next: Introduction to Costing →]
 ] <html-accounting>
 
@@ -57,7 +51,7 @@
 #document("chapters/costing.html", title: [Introduction to Costing])[
   #theme
   #link(<html-accounting>)[← Previous: Accounting Fundamentals]
-  #costing
+  #costing()
 ] <html-costing>
 
 #document("book.pdf", title: [Example Book])[
@@ -71,13 +65,13 @@
   ]
   #pagebreak()
 
-  #introduction
+  #introduction()
   #pagebreak()
 
-  #accounting
+  #accounting()
   #pagebreak()
 
-  #costing
+  #costing()
 ] <book-pdf>
 
 
