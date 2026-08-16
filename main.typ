@@ -1,6 +1,11 @@
 #let introduction = include "chapters/01-introduction.typ"
 #let accounting = include "chapters/02-accounting.typ"
 #let costing = include "chapters/03-costing.typ"
+#let forward = include "forward.typ"
+
+#let common = [
+  #forward
+]
 
 #let theme = [
   #html.elem("link", attrs: (rel: "stylesheet", href: "../style.css"))
@@ -18,6 +23,7 @@
   #title()
   #set heading(numbering: "1.")
   #outline()
+  #forward
 
   This is the online version of *Example Book*.
 
