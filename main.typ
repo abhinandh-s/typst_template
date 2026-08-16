@@ -1,11 +1,20 @@
+#let local-outline() = context {
+  let doc = query(selector(document).before(here())).last()
+  outline(
+    target: selector(heading).within(doc.location())
+  )
+}
+
 #document("index.html", title: [Home])[
   #title()
   #set heading(numbering: "1.")
-  #outline()
+  #local-outline()
   - #link(<blog>)[Go to blog]
 ]
 
 #document("blog.html", title: [Blog])[
+  #set heading(numbering: "1.")
+  #local-outline()
   #title()  
   Welcome to my blog!
   = Heading 01
@@ -19,7 +28,7 @@
 
 #document("blog.pdf", title: [Blog])[
   #set heading(numbering: "1.")
-  #outline()
+  #local-outline()
   Welcome to my blog!
   = Heading 01
   == Heading 02
