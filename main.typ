@@ -4,32 +4,31 @@
   #html.button(id: "theme-toggle", class: "theme-btn")[Theme: Tomato]
 ]
 
-#document("index.html", title: [Home])[
-  #theme
-  #set heading(numbering: "1.", bookmarked: false)
+#let html-page(filename, page-title, body) = {
+  document(filename, title: page-title)[
+    #theme
+    #set heading(numbering: "1.", bookmarked: false)
+    #body
+  ]
+}
+
+#html-page("index.html", [Home])[
   #title()
   #outline(target: heading.where(bookmarked: false, outlined: true))
   #include "foreword.typ"
   #link(<blog>)[Go to blog]
 ]
 
-#document("chapter-01.html", title: [Blog])[
-  #theme
-  #set heading(bookmarked: false)
-  
+#html-page("chapter-01.html", [Blog])[
   #title()
   #include "chapters/chapter-01.typ"
   This blog also exists as a
   #link(<blog-pdf>)[single PDF].
 ] <blog>
 
-
-#document("chapter-02.html", title: [Chapter 2])[
-  #theme
-  #set heading(bookmarked: false)
+#html-page("chapter-02.html", [Chapter 2])[
   #include "chapters/chapter-02.typ"
 ]
-
 #document("book.pdf", title: [Full Book])[
   #set page(paper: "a4", margin: 2.5cm)
   #set text(size: 11pt)
@@ -47,8 +46,6 @@
   #include "chapters/chapter-01.typ"
   #include "chapters/chapter-02.typ"
 ] <blog-pdf>
-
-
 
 // Export these into the output bundle
 #asset("css/style.css", read("/static/css/style.css"))
