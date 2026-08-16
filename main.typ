@@ -13,7 +13,7 @@
   #set heading(numbering: "1.", bookmarked: false)
   #title()
   #outline(target: heading.where(bookmarked: false, outlined: true))
-
+  #common
   #link(<blog>)[Go to blog]
 ]
 
@@ -22,6 +22,7 @@
   #set heading(bookmarked: false)
   
   #title()
+  #common
   #include "chapters/chapter-01.typ"
   This blog also exists as a
   #link(<blog-pdf>)[single PDF].
