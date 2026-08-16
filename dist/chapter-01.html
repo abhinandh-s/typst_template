@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Blog</title><style>/* Alignment */
+mtable.right-align mtd,
+mtable mtd.right-align,
+mtable.left-align mtd.right-align,
+mtable.aligned mtd:nth-child(odd) {
+  justify-items: end;
+  text-align: right;
+}
+mtable.cases mtd,
+mtable.left-align mtd,
+mtable mtd.left-align,
+mtable.aligned mtd:nth-child(even),
+math:is(:not([display])) > mtable.multiline-equation mtd {
+  justify-items: start;
+  text-align: left;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.left-flush {
+  padding-left: 0;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.right-flush {
+  padding-right: 0;
+}
+
+/* Tables */
+mtable {
+  math-style: inherit;
+}
+mtd {
+  math-depth: auto-add;
+  math-style: compact;
+  math-shift: compact;
+}
+
+/* Equations */
+mtable.multiline-equation mtd {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+  padding: 0;
+}
+math > mtable.multiline-equation mtr:not(:last-child) mtd {
+  padding-bottom: 0.5em;
+}
+
+/* Fractions */
+mfrac {
+  padding-inline: 0;
+  margin-inline: 0.1em;
+}
+
+/* Accents */
+mover[accent="true" i] > :first-child {
+  font-feature-settings: "dtls";
+}
+mover.dotted[accent="true" i] > :first-child {
+  font-feature-settings: "dtls" 0;
+}
+
+/* Other rules for scriptlevel, displaystyle and math-shift */
+munder > :nth-child(2),
+munderover > :nth-child(2) {
+  math-shift: compact
+}
+munder[accentunder="true" i] > :not(:first-child),
+mover[accent="true" i] > :not(:first-child) {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+}</style></head><body><link rel="stylesheet" href="css/style.css"><script src="js/theme.js"></script><p><button id="theme-toggle" class="theme-btn">Theme: Tomato</button></p><h1>Blog</h1><h2 id="loc-1">Foreword</h2><h3 id="loc-2">Copyright and Distribution</h3><p>Abhi’s Guide to Indian Partnership Act, 1932 is Copyright © 2026 Abhinandh S.</p><p>With specific exceptions for diagrams and translations, below, this work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. To view a copy of this license, visit <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">https://creativecommons.org/licenses/by-nc-nd/4.0/</a> or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.</p><p>One specific exception to the “No Derivative Works” portion of the license is as follows: this guide may be freely translated into any language, provided the translation is accurate, and the guide is reprinted in its entirety. The same license restrictions apply to the translation as to the original guide. The translation may also include the name and contact information for the translator.</p><p>The diagrams presented in this document is hereby granted to the public domain, and is completely free of any license restriction.</p><p>Educators are freely encouraged to recommend or supply copies of this guide to their students.</p><p>Contact <a href="mailto:abhinandhsuby@proton.me">abhinandhsuby@proton.me</a> for more information.</p><h2 id="loc-3">Lorem Ipsum</h2><p>“Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit…” “There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain…”</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis consectetur mauris. Donec quis bibendum velit, sed hendrerit metus. Curabitur et odio ante. Quisque consectetur metus augue, a suscipit quam auctor nec. Sed et vestibulum urna, nec tempor purus. Morbi pharetra ligula quis ligula condimentum auctor. Vivamus ac rhoncus arcu, at scelerisque leo. Mauris viverra, nisi ac pharetra pellentesque, elit ex lobortis tortor, quis ullamcorper libero metus non nulla. Cras dignissim risus neque, a ullamcorper sem luctus in. Etiam a interdum velit. Fusce ipsum mauris, cursus a sem scelerisque, cursus gravida mi. Fusce egestas felis nulla, volutpat ultrices purus convallis auctor. Praesent ante dolor, scelerisque eget ligula nec, lacinia feugiat diam. Praesent quis sodales dui. Nulla in dolor sagittis, hendrerit eros eu, accumsan metus.</p><p>Duis tempor massa vitae luctus tincidunt. Maecenas hendrerit tincidunt lorem, et pharetra enim placerat vitae. Suspendisse aliquam enim at purus fringilla gravida. Integer eu neque sapien. Aliquam erat volutpat. Mauris mattis, erat eget dapibus lacinia, dui lacus ultricies velit, ut condimentum purus nunc vitae eros. Nunc dolor urna, finibus ut turpis ac, consectetur pellentesque tortor. Maecenas a convallis quam. Curabitur tristique lorem urna, eleifend aliquet risus efficitur a. Aliquam a pellentesque est. Vestibulum in sapien ornare, volutpat mauris eu, interdum lacus. Quisque faucibus pulvinar tempus. Aenean sit amet lacus eleifend, convallis quam ut, maximus ligula. Proin quis augue vitae lacus condimentum rhoncus.</p><p>Pellentesque vitae mauris id tellus porta elementum. Proin id commodo mauris, et blandit lectus. Duis mauris velit, consectetur non pulvinar sit amet, ullamcorper sed turpis. Nullam non commodo eros. Praesent hendrerit dictum risus at tempus. Nunc quis commodo arcu. Nam semper tortor nibh. Integer quis posuere sem, non laoreet arcu. Maecenas et orci mi. Pellentesque vulputate tellus sit amet orci varius interdum. Sed malesuada diam ut odio lobortis sollicitudin. Integer dapibus nunc interdum vestibulum lobortis. Integer pharetra vehicula metus eget ullamcorper. Etiam faucibus mauris sapien, a pretium magna bibendum et.</p><p>Mauris ac velit sed nibh mollis ornare ut vel nisi. Aliquam eget gravida turpis. Donec efficitur lorem non metus suscipit sodales. Vivamus ultricies justo urna, at sollicitudin justo faucibus id. Fusce augue turpis, vehicula iaculis condimentum at, viverra et urna. Etiam efficitur dolor sit amet felis faucibus, at faucibus nulla efficitur. Nulla luctus elementum quam. Nunc sem enim, ornare et commodo a, tempus nec dolor. Suspendisse faucibus euismod dolor, mollis ultricies justo lacinia sed. Vestibulum lorem orci, luctus a vulputate a, viverra at urna. Ut mattis eleifend lectus a rutrum. Proin auctor placerat massa vitae facilisis. Vivamus sed malesuada quam.</p><p>Ut eu ullamcorper magna. Cras ornare ante nulla, nec blandit est efficitur nec. Nullam sollicitudin egestas justo ac blandit. Cras convallis lacus sit amet purus blandit, vitae pharetra ligula dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc quis efficitur sem. Vestibulum feugiat id sapien in pellentesque. Vestibulum sed dapibus mauris. Aenean dui dolor, congue eu enim et, malesuada feugiat neque. Nam vitae vulputate risus, ullamcorper pulvinar tellus.This blog also exists as a <a href="book.pdf">single PDF</a>.</p></body></html>

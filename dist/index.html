@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Home</title><style>/* Alignment */
+mtable.right-align mtd,
+mtable mtd.right-align,
+mtable.left-align mtd.right-align,
+mtable.aligned mtd:nth-child(odd) {
+  justify-items: end;
+  text-align: right;
+}
+mtable.cases mtd,
+mtable.left-align mtd,
+mtable mtd.left-align,
+mtable.aligned mtd:nth-child(even),
+math:is(:not([display])) > mtable.multiline-equation mtd {
+  justify-items: start;
+  text-align: left;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.left-flush {
+  padding-left: 0;
+}
+mtable.cases mtd,
+mtable.aligned mtd,
+mtable mtd.flushed,
+mtable mtd.right-flush {
+  padding-right: 0;
+}
+
+/* Tables */
+mtable {
+  math-style: inherit;
+}
+mtd {
+  math-depth: auto-add;
+  math-style: compact;
+  math-shift: compact;
+}
+
+/* Equations */
+mtable.multiline-equation mtd {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+  padding: 0;
+}
+math > mtable.multiline-equation mtr:not(:last-child) mtd {
+  padding-bottom: 0.5em;
+}
+
+/* Fractions */
+mfrac {
+  padding-inline: 0;
+  margin-inline: 0.1em;
+}
+
+/* Accents */
+mover[accent="true" i] > :first-child {
+  font-feature-settings: "dtls";
+}
+mover.dotted[accent="true" i] > :first-child {
+  font-feature-settings: "dtls" 0;
+}
+
+/* Other rules for scriptlevel, displaystyle and math-shift */
+munder > :nth-child(2),
+munderover > :nth-child(2) {
+  math-shift: compact
+}
+munder[accentunder="true" i] > :not(:first-child),
+mover[accent="true" i] > :not(:first-child) {
+  math-depth: inherit;
+  math-style: inherit;
+  math-shift: inherit;
+}</style></head><body><link rel="stylesheet" href="css/style.css"><script src="js/theme.js"></script><p><button id="theme-toggle" class="theme-btn">Theme: Tomato</button></p><h1>Home</h1><nav role="doc-toc"><h2>Contents</h2><ol style="list-style-type: none"><li><div><a href="#loc-1"><span class="prefix">1.</span> Foreword</a></div><ol style="list-style-type: none"><li><a href="#loc-2"><span class="prefix">1.1.</span> Copyright and Distribution</a></li></ol></li><li><div><a href="chapter-01.html#loc-1">Foreword</a></div><ol style="list-style-type: none"><li><a href="chapter-01.html#loc-2">Copyright and Distribution</a></li></ol></li><li><a href="chapter-01.html#loc-3">Lorem Ipsum</a></li><li><div><a href="chapter-02.html#accounting">Accounting Fundamentals</a></div><ol style="list-style-type: none"><li><a href="chapter-02.html#loc-1">Accounting equation</a></li><li><a href="chapter-02.html#loc-2">Example</a></li><li><a href="chapter-02.html#loc-3">Going further</a></li></ol></li></ol></nav><h2 id="loc-1">1. Foreword</h2><h3 id="loc-2">1.1. Copyright and Distribution</h3><p>Abhi’s Guide to Indian Partnership Act, 1932 is Copyright © 2026 Abhinandh S.</p><p>With specific exceptions for diagrams and translations, below, this work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. To view a copy of this license, visit <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">https://creativecommons.org/licenses/by-nc-nd/4.0/</a> or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.</p><p>One specific exception to the “No Derivative Works” portion of the license is as follows: this guide may be freely translated into any language, provided the translation is accurate, and the guide is reprinted in its entirety. The same license restrictions apply to the translation as to the original guide. The translation may also include the name and contact information for the translator.</p><p>The diagrams presented in this document is hereby granted to the public domain, and is completely free of any license restriction.</p><p>Educators are freely encouraged to recommend or supply copies of this guide to their students.</p><p>Contact <a href="mailto:abhinandhsuby@proton.me">abhinandhsuby@proton.me</a> for more information.</p><p><a href="chapter-01.html">Go to blog</a></p></body></html>
