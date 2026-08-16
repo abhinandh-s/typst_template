@@ -1,4 +1,11 @@
 #let theme = [
+  #html.elem("script")[
+    let savedTheme = localStorage.getItem('theme');
+    if (!savedTheme) {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      savedTheme = prefersDark ? 'dark' : 'light';
+    } document.documentElement.setAttribute('data-theme', savedTheme);
+  ]
   #html.elem("link", attrs: (rel: "stylesheet", href: "css/style.css"))
   #html.script(src: "js/sidebar.js")
   #html.script(src: "js/theme.js")
