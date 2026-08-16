@@ -22,6 +22,15 @@
 ]
 
 #document("book.pdf", title: [Full Book])[
+  #set page(paper: "a4", margin: 2.5cm)
+  #set text(size: 11pt)
+
+  #align(center)[
+    #text(24pt, weight: "bold")[Example Book]
+    #v(1em)
+    A demonstration book built with Typst.
+  ]
+  #pagebreak()
   #set heading(bookmarked: true)
   #outline(target: heading.where(bookmarked: true, outlined: true))
   
