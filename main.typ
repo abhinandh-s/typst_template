@@ -66,7 +66,7 @@ This guide also exists as a
 #html-page("chapter-02.html", [Chapter 2])[
   #include "chapters/chapter-02.typ"
   #nav(<ch1>, none)
-]
+] <ch2>
 
 #document("ag.pdf", title: [Full Book])[
   #set page(paper: "a4", margin: 2.5cm)
