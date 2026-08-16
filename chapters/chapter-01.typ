@@ -1,3 +1,71 @@
+
+= Syntax
+
+== Highlight
+
+This is #highlight[important].
+
+== Overline
+
+#overline[A line over text.]
+
+= Raw
+
+Adding `rbx` to `rcx` gives
+the desired result.
+
+What is ```rust fn main()``` in Rust
+would be ```c int main()``` in C.
+
+```rust
+fn main() {
+    println!("Hello World!");
+}
+```
+
+This has ``` `backticks` ``` in it
+(but the spaces are trimmed). And
+``` here``` the leading space is
+also trimmed.
+
+"This is in quotes."
+
+#set text(lang: "de")
+"Das ist in Anführungszeichen."
+
+#set text(lang: "fr")
+"C'est entre guillemets."
+
+This is #underline[important].
+
+This is #strike[not] relevant.
+
+1#super[st] try!
+
+Revenue#sub[yearly]
+
+You can edit Typst documents online.
+#footnote[https://typst.app/app] <fn>
+Checkout Typst's website. @fn
+And the online app. #footnote(<fn>)
+
+/ Ligature: A merged glyph.
+/ Kerning: A spacing adjustment
+  between two adjacent letters.
+
+#set quote(block: true)
+
+#quote(attribution: [Plato])[
+  ... ἔοικα γοῦν τούτου γε σμικρῷ τινι αὐτῷ τούτῳ σοφώτερος εἶναι, ὅτι
+  ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι.
+]
+
+
+#show divider: set line(stroke: 2pt + red)
+First part
+#divider()
+Second part
+
 = Lorem Ipsum
 
 "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
