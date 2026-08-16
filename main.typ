@@ -13,7 +13,8 @@
 
   #title()
   #set heading(numbering: "1.")
-  #outline()
+    // NOTE: target html only
+    #outline(target: selector(heading).after(<html-index-start>).before(<html-index-end>))
   #include "foreword.typ"
 
   This is the online version of *Example Book*.
@@ -55,7 +56,10 @@
     A demonstration book built with Typst.
   ]
   #pagebreak()
-  #outline()
+
+  #set heading(numbering: "1.")
+  // NOTE: target pdf only
+  #outline(target: selector(heading).after(<pdf-start>).before(<pdf-end>))
   #pagebreak()
 
   #include "chapters/01-introduction.typ"
