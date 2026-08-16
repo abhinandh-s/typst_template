@@ -25,7 +25,7 @@
 }
 
 .icon-btn:hover {
-  background-color: var(--ctp-surface1, #e0e0e0);
+  color: var(--accent);
 }
 
 .material-symbols-outlined {
@@ -56,8 +56,8 @@ body.sidebar-toggled #content {
   left: 0;
   top: 0;
   padding: 20px;
-  background: var(--ctp-surface1, #f9f9f9);
-  border-right: 1px solid var(--fg, #ddd);
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--fg);
   box-shadow: 4px 0 10px rgba(0,0,0,0.1);
   overflow-y: auto;
   z-index: 999;
