@@ -1,14 +1,36 @@
-= Lorem Ipsum 02
+= Accounting Fundamentals <accounting>
 
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
+Accounting is the process of recording, classifying,
+summarising, analysing, and interpreting financial
+transactions.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis consectetur mauris. Donec quis bibendum velit, sed hendrerit metus. Curabitur et odio ante. Quisque consectetur metus augue, a suscipit quam auctor nec. Sed et vestibulum urna, nec tempor purus. Morbi pharetra ligula quis ligula condimentum auctor. Vivamus ac rhoncus arcu, at scelerisque leo. Mauris viverra, nisi ac pharetra pellentesque, elit ex lobortis tortor, quis ullamcorper libero metus non nulla. Cras dignissim risus neque, a ullamcorper sem luctus in. Etiam a interdum velit. Fusce ipsum mauris, cursus a sem scelerisque, cursus gravida mi. Fusce egestas felis nulla, volutpat ultrices purus convallis auctor. Praesent ante dolor, scelerisque eget ligula nec, lacinia feugiat diam. Praesent quis sodales dui. Nulla in dolor sagittis, hendrerit eros eu, accumsan metus.
+== Accounting equation
 
-Duis tempor massa vitae luctus tincidunt. Maecenas hendrerit tincidunt lorem, et pharetra enim placerat vitae. Suspendisse aliquam enim at purus fringilla gravida. Integer eu neque sapien. Aliquam erat volutpat. Mauris mattis, erat eget dapibus lacinia, dui lacus ultricies velit, ut condimentum purus nunc vitae eros. Nunc dolor urna, finibus ut turpis ac, consectetur pellentesque tortor. Maecenas a convallis quam. Curabitur tristique lorem urna, eleifend aliquet risus efficitur a. Aliquam a pellentesque est. Vestibulum in sapien ornare, volutpat mauris eu, interdum lacus. Quisque faucibus pulvinar tempus. Aenean sit amet lacus eleifend, convallis quam ut, maximus ligula. Proin quis augue vitae lacus condimentum rhoncus.
+The basic accounting equation is:
 
-Pellentesque vitae mauris id tellus porta elementum. Proin id commodo mauris, et blandit lectus. Duis mauris velit, consectetur non pulvinar sit amet, ullamcorper sed turpis. Nullam non commodo eros. Praesent hendrerit dictum risus at tempus. Nunc quis commodo arcu. Nam semper tortor nibh. Integer quis posuere sem, non laoreet arcu. Maecenas et orci mi. Pellentesque vulputate tellus sit amet orci varius interdum. Sed malesuada diam ut odio lobortis sollicitudin. Integer dapibus nunc interdum vestibulum lobortis. Integer pharetra vehicula metus eget ullamcorper. Etiam faucibus mauris sapien, a pretium magna bibendum et.
+$ "Assets" = "Liabilities" + "Equity" $
 
-Mauris ac velit sed nibh mollis ornare ut vel nisi. Aliquam eget gravida turpis. Donec efficitur lorem non metus suscipit sodales. Vivamus ultricies justo urna, at sollicitudin justo faucibus id. Fusce augue turpis, vehicula iaculis condimentum at, viverra et urna. Etiam efficitur dolor sit amet felis faucibus, at faucibus nulla efficitur. Nulla luctus elementum quam. Nunc sem enim, ornare et commodo a, tempus nec dolor. Suspendisse faucibus euismod dolor, mollis ultricies justo lacinia sed. Vestibulum lorem orci, luctus a vulputate a, viverra at urna. Ut mattis eleifend lectus a rutrum. Proin auctor placerat massa vitae facilisis. Vivamus sed malesuada quam.
+For example, suppose a business has:
 
-Ut eu ullamcorper magna. Cras ornare ante nulla, nec blandit est efficitur nec. Nullam sollicitudin egestas justo ac blandit. Cras convallis lacus sit amet purus blandit, vitae pharetra ligula dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc quis efficitur sem. Vestibulum feugiat id sapien in pellentesque. Vestibulum sed dapibus mauris. Aenean dui dolor, congue eu enim et, malesuada feugiat neque. Nam vitae vulputate risus, ullamcorper pulvinar tellus.
+- Assets: ₹100,000
+- Liabilities: ₹40,000
+- Owner's equity: ₹60,000
+
+Then:
+
+$ 100000 = 40000 + 60000 $
+
+== Example
+
+Suppose a business purchases machinery for ₹20,000 in cash.
+
+The transaction affects two assets:
+
+- Machinery increases by ₹20,000.
+- Cash decreases by ₹20,000.
+
+Therefore, total assets remain unchanged.
+
+== Going further
+
+The next chapter discusses cost concepts.
