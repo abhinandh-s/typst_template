@@ -25,8 +25,6 @@
     #set heading(numbering: "1.", bookmarked: false)
     
     #html.elem("nav", attrs: (id: "sidebar"))[
-      #text(size: 1.5em, weight: "bold")[Table of Contents]
-      #v(1em)
       #outline(target: heading.where(bookmarked: false, outlined: true))
     ]
 
