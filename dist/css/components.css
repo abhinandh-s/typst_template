@@ -1,5 +1,5 @@
 .top-bar {
-  padding: 15px 20px;
+  padding: 15px 10px;
   /* flex + space-between pushes the icons to opposite ends */
   display: flex;
   justify-content: space-between; 
