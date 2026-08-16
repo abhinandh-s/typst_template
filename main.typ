@@ -4,16 +4,12 @@
   #html.button(id: "theme-toggle", class: "theme-btn")[Theme: Tomato]
 ]
 
-#let common() = [
-  #include "foreword.typ"
-]
-
 #document("index.html", title: [Home])[
   #theme
   #set heading(numbering: "1.", bookmarked: false)
   #title()
   #outline(target: heading.where(bookmarked: false, outlined: true))
-  #common()
+  #include "foreword.typ"
   #link(<blog>)[Go to blog]
 ]
 
@@ -47,7 +43,7 @@
   #set heading(bookmarked: true)
   #outline(target: heading.where(bookmarked: true, outlined: true))
 
-  #common()
+  #include "foreword.typ"
   #include "chapters/chapter-01.typ"
   #include "chapters/chapter-02.typ"
 ] <blog-pdf>
