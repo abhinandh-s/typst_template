@@ -15,10 +15,14 @@
 #html-page("index.html", [Home])[
   #title()
   #outline(target: heading.where(bookmarked: false, outlined: true))
-  #link(<blog>)[Go to blog]
+  #link(<ch1>)[Go to Chapter 01]
 
 This guide also exists as a
   #link(<book-pdf>)[single PDF].
+]
+
+#html-page("foreword.html", [Foreword])[
+  #include "foreword.typ"
 ]
 
 #html-page("chapter-01.html", [Chapter 01])[
@@ -28,9 +32,6 @@ This guide also exists as a
 
 #html-page("chapter-02.html", [Chapter 2])[
   #include "chapters/chapter-02.typ"
-]
-#html-page("foreword.html", [Foreword])[
-  #include "foreword.typ"
 ]
 
 #document("ag.pdf", title: [Full Book])[
