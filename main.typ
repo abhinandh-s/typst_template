@@ -1,81 +1,60 @@
-#let introduction() = include "chapters/01-introduction.typ"
-#let accounting() = include "chapters/02-accounting.typ"
-#let costing() = include "chapters/03-costing.typ"
-#let foreword() = include "foreword.typ"
+#import "template.typ": web-theme, book-pdf-template
 
-#let common = [
-  #foreword
-]
-
-#let theme = [
-  #html.elem("link", attrs: (rel: "stylesheet", href: "../style.css"))
-  #html.script(src: "../theme.js")
-  #html.button(id: "theme-toggle", class: "theme-btn")[Theme: Tomato]
-]
+// --- HTML Pages ---
 
 #document("index.html", title: [Example Book])[
-  #html.elem("link", attrs: (rel: "stylesheet", href: "style.css"))
-  // Add the script and button
-  #html.script(src: "theme.js")
-  #html.button(id: "theme-toggle", class: "theme-btn")[Theme: Tomato]
-
-
+  #web-theme
   #title()
-This is the online version of *Example Book*.
-  #set heading(numbering: "1.")
-  #outline()
-  #foreword()
+  #include "foreword.typ"
 
-  
+  This is the online version of *Example Book*.
+
+  == Chapters
+  - #link(<html-introduction>)[Introduction]
+  - #link(<html-accounting>)[Accounting Fundamentals]
+  - #link(<html-costing>)[Introduction to Costing]
+
   == Other formats
-
   #link(<book-pdf>)[Download the complete book as PDF.]
 ]
 
-
 #document("chapters/introduction.html", title: [Introduction])[
-  #theme
-  #introduction()
+  #web-theme
+  #include "chapters/01-introduction.typ"
   #link(<html-accounting>)[Next: Accounting Fundamentals →]
 ] <html-introduction>
 
-
 #document("chapters/accounting.html", title: [Accounting Fundamentals])[
-  #theme
+  #web-theme
   #link(<html-introduction>)[← Previous: Introduction]
-  #accounting()
+  #include "chapters/02-accounting.typ"
   #link(<html-costing>)[Next: Introduction to Costing →]
 ] <html-accounting>
 
-
 #document("chapters/costing.html", title: [Introduction to Costing])[
-  #theme
+  #web-theme
   #link(<html-accounting>)[← Previous: Accounting Fundamentals]
-  #costing()
+  #include "chapters/03-costing.typ"
 ] <html-costing>
 
+// --- PDF Compilation ---
+
 #document("book.pdf", title: [Example Book])[
-  #set page(paper: "a4", margin: 2.5cm)
-  #set text(size: 11pt)
+  #show: book-pdf-template.with(title: [Example Book])
 
-  #align(center)[
-    #text(24pt, weight: "bold")[Example Book]
-    #v(1em)
-    A demonstration book built with Typst.
-  ]
+  #include "foreword.typ"
   #pagebreak()
 
-  #introduction()
+  #include "chapters/01-introduction.typ"
   #pagebreak()
 
-  #accounting()
+  #include "chapters/02-accounting.typ"
   #pagebreak()
 
-  #costing()
+  #include "chapters/03-costing.typ"
 ] <book-pdf>
 
-
-// Export these into the output bundle
+// --- Static Assets ---
 #asset("style.css", read("static/style.css"))
 #asset("variables.css", read("static/variables.css"))
 #asset("base.css", read("static/base.css"))
