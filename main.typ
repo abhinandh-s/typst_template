@@ -19,7 +19,7 @@
 
 #document("blog.pdf", title: [Blog])[
   #set heading(numbering: "1.")
-  #outline ()
+  #outline()
   Welcome to my blog!
   = Heading 01
   == Heading 02
