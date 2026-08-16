@@ -54,5 +54,5 @@
 #asset("css/variables.css", read("/static/css/variables.css"))
 #asset("css/base.css", read("/static/css/base.css"))
 #asset("css/components.css", read("/static/components.css"))
-#asset("js/theme.js", read("/static/theme.js")) 
+#asset("js/theme.js", read("/static/js/theme.js")) 
 #asset("favicon.ico", read("/images/favicon.ico", encoding: none))
