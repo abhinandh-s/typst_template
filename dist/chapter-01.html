@@ -72,7 +72,14 @@ mover[accent="true" i] > :not(:first-child) {
   math-depth: inherit;
   math-style: inherit;
   math-shift: inherit;
-}</style></head><body><script>let savedTheme = localStorage.getItem(‘theme’); if (!savedTheme) { const prefersDark = window.matchMedia(‘(prefers-color-scheme: dark)’).matches; savedTheme = prefersDark ? ‘dark’ : ‘light’; } document.documentElement.setAttribute(‘data-theme’, savedTheme);</script><script>
+}</style></head><body><script>
+    let savedTheme = localStorage.getItem('theme');
+    if (!savedTheme) {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      savedTheme = prefersDark ? 'dark' : 'light';
+    } 
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script><script>
     document.addEventListener('DOMContentLoaded', function() {
       const nav = document.querySelector('.bottom-nav');
       const endnotes = document.querySelector('section[role="doc-endnotes"]');
