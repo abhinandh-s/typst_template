@@ -6,8 +6,7 @@
       savedTheme = prefersDark ? 'dark' : 'light';
     } 
     document.documentElement.setAttribute('data-theme', savedTheme);
-  ") document.documentElement.setAttribute('data-theme', savedTheme);
-  ]
+  ")
   #html.script("
     document.addEventListener('DOMContentLoaded', function() {
       const nav = document.querySelector('.bottom-nav');
