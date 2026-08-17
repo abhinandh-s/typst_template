@@ -7,6 +7,9 @@
     radius: (right: 3pt),
     [
       #text(fill: accent-color, weight: "bold")[
+        // 1. The invisible hook for HTML CSS targeting (ignored by PDF)
+        #html.elem("span", attrs: (class: "gh-icon-hook"))[\u{200B}]
+        // 2. The actual icon
         #box(baseline: 0.25em)[#image(icon-file, width: 1.1em, height: 1.1em)] 
         #h(0.3em) #title
       ]
