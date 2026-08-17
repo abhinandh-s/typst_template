@@ -8,9 +8,9 @@
   ]
   #html.elem("script")[
     document.addEventListener("DOMContentLoaded", function() {
-      const nav = document.querySelector('.bottom-nav');
-      if (nav) {
-        document.body.appendChild(nav);
+      const body = document.querySelector('body');
+      if (body) {
+        document.body.appendChild(".bottom-nav");
       }
     });
   ]
