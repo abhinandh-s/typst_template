@@ -33,6 +33,7 @@ jobs:
     env:
       TYPST_FEATURES: "bundle,html"
       CREATE_RELEASE: "false"
+      COMMIT_BACK: "false"
   
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -62,6 +63,7 @@ jobs:
 
         
       - name: Commit generated files
+        if: env.COMMIT_BACK == 'true' 
         uses: stefanzweifel/git-auto-commit-action@v5
         # Adding continue-on-error temporarily so the workflow doesn't fail 
         # while we are just trying to read the tree output!
