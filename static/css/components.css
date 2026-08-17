@@ -127,5 +127,5 @@ body.sidebar-toggled #sidebar {
 
 
 .footnotes-divider {
-    border-top: 1px solid var(--fg);
+    border: 1px solid var(--fg);
 }
