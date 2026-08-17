@@ -130,71 +130,97 @@ body.sidebar-toggled #sidebar {
     color: var(--fg);
 }
 
-
 /* =========================================
    GITHUB FLAVORED MARKDOWN ALERTS
+   Restoring Typst styles stripped by HTML export
 ========================================= */
 
-/* 1. Target the Alert Container */
+/* 1. Base Container Structure */
 div:has(.gh-icon-hook) {
-  margin: 16px 0 !important;
+  margin: 16px 0;
+  padding: 0.6em 1em 0.8em;
+  border-left: 4px solid;
+  border-radius: 0 3px 3px 0;
   color: var(--fg, #24292f);
-  font-size: 14px; /* GFM uses slightly smaller font for alerts */
+  font-size: 14px;
   line-height: 1.5;
 }
 
-/* 2. Style the Title Line */
-div:has(.gh-icon-hook) > span:first-child {
-  display: inline-flex !important;
+/* 2. Format the Title Line */
+div:has(.gh-icon-hook) > p:first-child {
+  font-weight: bold;
+  display: flex;
   align-items: center;
+  margin-top: 0;
   margin-bottom: 8px;
-  font-size: 14px;
 }
 
-/* 3. The Icon Alignment Fix */
-.gh-icon-hook ~ span img,
+/* Fix icon spacing */
 .gh-icon-hook ~ img {
-  transform: translateY(2px); /* Pixel-perfect nudge for HTML */
+  margin-right: 6px;
 }
 
-/* 4. Fix Body Paragraph Spacing */
-div:has(.gh-icon-hook) p {
-  margin: 0;
-}
-div:has(.gh-icon-hook) p + p {
-  margin-top: 10px; /* Space between multiple paragraphs */
+div:has(.gh-icon-hook) p:last-child {
+  margin-bottom: 0;
 }
 
 /* =========================================
+   LIGHT MODE COLORS (Matches Typst PDF)
+========================================= */
+
+/* NOTE (Blue) */
+div:has(.gh-alert-note) { background-color: rgba(9, 105, 218, 0.1); border-left-color: #0969da; }
+div:has(.gh-alert-note) > p:first-child { color: #0969da; }
+
+/* TIP (Green) */
+div:has(.gh-alert-tip) { background-color: rgba(26, 127, 55, 0.1); border-left-color: #1a7f37; }
+div:has(.gh-alert-tip) > p:first-child { color: #1a7f37; }
+
+/* IMPORTANT (Purple) */
+div:has(.gh-alert-important) { background-color: rgba(130, 80, 223, 0.1); border-left-color: #8250df; }
+div:has(.gh-alert-important) > p:first-child { color: #8250df; }
+
+/* WARNING (Yellow) */
+div:has(.gh-alert-warning) { background-color: rgba(191, 135, 0, 0.1); border-left-color: #bf8700; }
+div:has(.gh-alert-warning) > p:first-child { color: #bf8700; }
+
+/* CAUTION (Red) */
+div:has(.gh-alert-caution) { background-color: rgba(209, 36, 47, 0.1); border-left-color: #d1242f; }
+div:has(.gh-alert-caution) > p:first-child { color: #d1242f; }
+
+/* QUOTE (Gray) */
+div:has(.gh-alert-quote) { background-color: rgba(101, 109, 118, 0.1); border-left-color: #656d76; }
+div:has(.gh-alert-quote) > p:first-child { color: #656d76; }
+
+
+/* =========================================
    DARK MODE COLORS (Official GFM Palette)
-   Typst's inline colors look great in Light mode. 
-   In Dark Mode, we must brighten them!
 ========================================= */
 
 [data-theme="dark"] div:has(.gh-icon-hook) {
   color: var(--fg, #c9d1d9); /* Light gray body text */
 }
 
-/* NOTE (Blue) */
-[data-theme="dark"] div:has(.gh-alert-note) { border-left-color: #2f81f7 !important; }
-[data-theme="dark"] div:has(.gh-alert-note) > span:first-child { color: #2f81f7 !important; }
+/* NOTE */
+[data-theme="dark"] div:has(.gh-alert-note) { background-color: rgba(47, 129, 247, 0.1); border-left-color: #2f81f7; }
+[data-theme="dark"] div:has(.gh-alert-note) > p:first-child { color: #2f81f7; }
 
-/* TIP (Green) */
-[data-theme="dark"] div:has(.gh-alert-tip) { border-left-color: #3fb950 !important; }
-[data-theme="dark"] div:has(.gh-alert-tip) > span:first-child { color: #3fb950 !important; }
+/* TIP */
+[data-theme="dark"] div:has(.gh-alert-tip) { background-color: rgba(63, 185, 80, 0.1); border-left-color: #3fb950; }
+[data-theme="dark"] div:has(.gh-alert-tip) > p:first-child { color: #3fb950; }
 
-/* IMPORTANT (Purple) */
-[data-theme="dark"] div:has(.gh-alert-important) { border-left-color: #a371f7 !important; }
-[data-theme="dark"] div:has(.gh-alert-important) > span:first-child { color: #a371f7 !important; }
+/* IMPORTANT */
+[data-theme="dark"] div:has(.gh-alert-important) { background-color: rgba(163, 113, 247, 0.1); border-left-color: #a371f7; }
+[data-theme="dark"] div:has(.gh-alert-important) > p:first-child { color: #a371f7; }
 
-/* WARNING (Yellow) */
-[data-theme="dark"] div:has(.gh-alert-warning) { border-left-color: #d29922 !important; }
-[data-theme="dark"] div:has(.gh-alert-warning) > span:first-child { color: #d29922 !important; }
+/* WARNING */
+[data-theme="dark"] div:has(.gh-alert-warning) { background-color: rgba(210, 153, 34, 0.1); border-left-color: #d29922; }
+[data-theme="dark"] div:has(.gh-alert-warning) > p:first-child { color: #d29922; }
 
-/* CAUTION (Red) */
-[data-theme="dark"] div:has(.gh-alert-caution) { border-left-color: #f85149 !important; }
-[data-theme="dark"] div:has(.gh-alert-caution) > span:first-child { color: #f85149 !important; }
+/* CAUTION */
+[data-theme="dark"] div:has(.gh-alert-caution) { background-color: rgba(248, 81, 73, 0.1); border-left-color: #f85149; }
+[data-theme="dark"] div:has(.gh-alert-caution) > p:first-child { color: #f85149; }
 
-/* QUOTE (Gray) */
-[data-theme="dark"] div:has(.gh-alert-quote) { border-left-color: #8b949e !important; }
-[data-theme="dark"] div:has(.gh-alert-quote) > span:first-child { color: #8b949e !important; }
+/* QUOTE */
+[data-theme="dark"] div:has(.gh-alert-quote) { background-color: rgba(139, 148, 158, 0.1); border-left-color: #8b949e; }
+[data-theme="dark"] div:has(.gh-alert-quote) > p:first-child { color: #8b949e; }
