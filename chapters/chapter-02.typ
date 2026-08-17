@@ -62,14 +62,9 @@ The next chapter discusses cost concepts.
   ]
 }
 
-// The 5 standard GitHub alert types mapped to FontAwesome icons
-#let note(body) = github-alert("note", "Note", fa-circle-info(), rgb("#0969da"), body)
-#let tip(body) = github-alert("tip", "Tip", fa-lightbulb(), rgb("#1a7f37"), body)
-#let important(body) = github-alert("important", "Important", fa-message(), rgb("#8250df"), body)
-#let warning(body) = github-alert("warning", "Warning", fa-triangle-exclamation(), rgb("#bf8700"), body)
-#let caution(body) = github-alert("caution", "Caution", fa-circle-xmark(), rgb("#d1242f"), body)
 
 
+#import "../gfm.typ": note, tip, warning, important, caution, quote
 
 
 
@@ -91,6 +86,10 @@ The next chapter discusses cost concepts.
 ]
 
 #caution[
+  Negative potential consequences of an action.
+]
+
+#quote[
   Negative potential consequences of an action.
 ]
 
