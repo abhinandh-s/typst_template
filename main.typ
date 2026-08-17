@@ -13,7 +13,7 @@
       
       if (nav) {
         if (endnotes) {
-         endnotes.insertAdjacentElement('afterend', nav);
+          endnotes.insertAdjacentElement('afterend', nav);
         } else {
           document.body.appendChild(nav);
         }
