@@ -125,3 +125,7 @@ body.sidebar-toggled #sidebar {
   background-color: #45475a; 
 }
 
+
+.footnotes-divider {
+    border-top: 1px solid var(--fg);
+}
