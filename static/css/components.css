@@ -129,20 +129,3 @@ body.sidebar-toggled #sidebar {
 .footnotes-divider {
     color: var(--fg);
 }
-
-
-/* 
- * GITHUB ALERTS - DARK MODE CSS 
- * In PDF and Light Mode, Typst's native styles handle everything perfectly.
- * When in Dark Mode, we intercept the inline background colors and darken them.
- */
-[data-theme="dark"] .github-alert > div {
-  background-color: var(--alert-bg, rgba(255, 255, 255, 0.05)) !important;
-}
-
-/* Optional: Subtle colored translucent backgrounds per alert type in dark mode */
-[data-theme="dark"] .github-alert-note > div      { background-color: rgba(9, 105, 218, 0.15) !important; }
-[data-theme="dark"] .github-alert-tip > div       { background-color: rgba(26, 127, 55, 0.15) !important; }
-[data-theme="dark"] .github-alert-important > div { background-color: rgba(130, 80, 223, 0.15) !important; }
-[data-theme="dark"] .github-alert-warning > div   { background-color: rgba(191, 135, 0, 0.15) !important; }
-[data-theme="dark"] .github-alert-caution > div   { background-color: rgba(209, 36, 47, 0.15) !important; }
