@@ -1,5 +1,5 @@
 .top-bar {
-  padding: 15px 10px;
+  /* padding: 15px 10px; */
   /* flex + space-between pushes left child (menu) and right child (.top-bar-right) to opposite ends */
   display: flex;
   justify-content: space-between; 
