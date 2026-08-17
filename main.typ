@@ -6,14 +6,20 @@
       savedTheme = prefersDark ? 'dark' : 'light';
     } document.documentElement.setAttribute('data-theme', savedTheme);
   ]
-    #html.elem("script")["
-    document.addEventListener('DOMContentLoaded', function() {  
+    #html.script("
+    document.addEventListener('DOMContentLoaded', function() {
       const nav = document.querySelector('.bottom-nav');
+      const endnotes = document.querySelector('section[role=\"doc-endnotes\"]');
+      
       if (nav) {
-        document.body.appendChild(nav);
+        if (endnotes) {
+         endnotes.insertAdjacentElement('afterend', nav);
+        } else {
+          document.body.appendChild(nav);
+        }
       }
     });
-  "]
+  ")
 
   #html.elem("link", attrs: (rel: "stylesheet", href: "css/style.css"))
   #html.script(src: "js/sidebar.js")
