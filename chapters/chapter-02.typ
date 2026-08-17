@@ -38,32 +38,6 @@ The next chapter discusses cost concepts.
 
 // =====
 
-#import "@preview/fontawesome:0.4.0": *
-
-#let github-alert(kind, title, icon, accent-color, body) = {
-  // The html.elem wrapper does not appear in PDF. It strictly serves 
-  // as a CSS hook to override the background for Dark Mode in HTML.
-  html.elem("div", attrs: (class: "github-alert github-alert-" + kind))[
-    #block(
-      width: 100%,
-      stroke: (left: 4pt + accent-color),
-      inset: (x: 1em, top: 0.6em, bottom: 0.8em),
-      fill: accent-color.lighten(95%),
-      radius: (right: 3pt),
-      [
-        // The icon inherits this text color automatically!
-        #text(fill: accent-color, weight: "bold")[
-          #box(baseline: 15%)[#icon] #h(0.3em) #title
-        ]
-        #v(0.5em, weak: true)
-        #body
-      ]
-    )
-  ]
-}
-
-
-
 #import "../gfm.typ": note, tip, warning, important, caution, quote
 
 
