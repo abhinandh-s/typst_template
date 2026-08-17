@@ -11,12 +11,16 @@
       const nav = document.querySelector('.bottom-nav');
       const endnotes = document.querySelector('section[role=\"doc-endnotes\"]');
       
-      if (nav) {
-        if (endnotes) {
+      if (endnotes) {
+        const divider = document.createElement('hr');
+        divider.className = 'footnotes-divider'; // Optional: for custom CSS styling
+        endnotes.insertAdjacentElement('beforebegin', divider);
+        
+        if (nav) {
           endnotes.insertAdjacentElement('afterend', nav);
-        } else {
-          document.body.appendChild(nav);
         }
+      } else if (nav) {
+        document.body.appendChild(nav);
       }
     });
   ")
