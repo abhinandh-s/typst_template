@@ -1,10 +1,12 @@
 #let theme = [
-  #html.elem("script")[
+  #html.script("
     let savedTheme = localStorage.getItem('theme');
     if (!savedTheme) {
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       savedTheme = prefersDark ? 'dark' : 'light';
-    } document.documentElement.setAttribute('data-theme', savedTheme);
+    } 
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  ") document.documentElement.setAttribute('data-theme', savedTheme);
   ]
   #html.script("
     document.addEventListener('DOMContentLoaded', function() {
