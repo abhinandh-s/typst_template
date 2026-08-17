@@ -13,7 +13,7 @@
       
       if (endnotes) {
         const divider = document.createElement('hr');
-        divider.className = 'footnotes-divider'; // Optional: for custom CSS styling
+        divider.className = 'footnotes-divider';
         endnotes.insertAdjacentElement('beforebegin', divider);
         
         if (nav) {
