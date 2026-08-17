@@ -6,14 +6,15 @@
       savedTheme = prefersDark ? 'dark' : 'light';
     } document.documentElement.setAttribute('data-theme', savedTheme);
   ]
-  #html.elem("script")[
-    document.addEventListener("DOMContentLoaded", function() {
-      const body = document.querySelector('body');
-      if (body) {
-        document.body.appendChild(".bottom-nav");
+    #html.elem("script")[
+    document.addEventListener("DOMContentLoaded", function() {  
+      const nav = document.querySelector('.bottom-nav');
+      if (nav) {
+        document.body.appendChild(nav);
       }
     });
   ]
+
   #html.elem("link", attrs: (rel: "stylesheet", href: "css/style.css"))
   #html.script(src: "js/sidebar.js")
   #html.script(src: "js/theme.js")
