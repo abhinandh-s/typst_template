@@ -129,3 +129,18 @@ body.sidebar-toggled #sidebar {
 .footnotes-divider {
     color: var(--fg);
 }
+
+
+/* 
+ * Fix vertical alignment for GitHub alert icons in HTML.
+ * The position/top gently nudges the icons down to match the PDF perfectly.
+ */
+img[src*="note.svg"], 
+img[src*="tip.svg"], 
+img[src*="important.svg"], 
+img[src*="warning.svg"], 
+img[src*="caution.svg"], 
+img[src*="quote.svg"] {
+  position: relative;
+  top: 2px; /* You can increase this to 3px or 4px if it needs to go lower */
+}
