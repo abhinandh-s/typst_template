@@ -1,12 +1,18 @@
 .top-bar {
   padding: 15px 10px;
-  /* flex + space-between pushes the icons to opposite ends */
+  /* flex + space-between pushes left child (menu) and right child (.top-bar-right) to opposite ends */
   display: flex;
   justify-content: space-between; 
   align-items: center;
-  
-  /* Smooth slide when sidebar opens */
   transition: transform 0.3s ease;
+}
+
+/* New layout for the right-side buttons */
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the PDF and Theme icons */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .icon-btn {
@@ -15,12 +21,11 @@
   justify-content: center;
   padding: 8px;
   cursor: pointer;
-  
-  /* Clean, borderless icon look */
   background: transparent;
   border: none;
   border-radius: 8px;
   color: var(--fg, #333);
+  text-decoration: none; /* Prevents underline on the <a> tag version */
   transition: background-color 0.2s, opacity 0.3s ease;
 }
 
@@ -29,7 +34,14 @@
 }
 
 .material-symbols-outlined {
-  font-size: 28px; /* Slightly bigger since they are standalone */
+  font-size: 28px; 
+}
+
+/* Sizing and coloring the inline SVG */
+.svg-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor; /* Forces the SVG to match the color/hover states of text */
 }
 
 /* Push top-bar right by the exact width of the sidebar (250px) */
@@ -37,10 +49,10 @@ body.sidebar-toggled .top-bar {
   transform: translateX(250px);
 }
 
-/* Fade out the theme button completely */
-body.sidebar-toggled #theme-toggle {
+/* Fade out both the PDF and theme buttons completely when sidebar is open */
+body.sidebar-toggled .top-bar-right {
   opacity: 0;
-  pointer-events: none; /* Stops it from being clickable while hidden */
+  pointer-events: none;
   visibility: hidden;
 }
 
