@@ -142,5 +142,5 @@ img[src*="warning.svg"],
 img[src*="caution.svg"], 
 img[src*="quote.svg"] {
   position: relative;
-  top: 2px; /* You can increase this to 3px or 4px if it needs to go lower */
+  top: 5px; /* You can increase this to 3px or 4px if it needs to go lower */
 }
