@@ -131,11 +131,70 @@ body.sidebar-toggled #sidebar {
 }
 
 
-/* 
- * Fix vertical alignment for GitHub alert icons in HTML.
- * We target the image inside the span that immediately follows our invisible hook.
- */
+/* =========================================
+   GITHUB FLAVORED MARKDOWN ALERTS
+========================================= */
+
+/* 1. Target the Alert Container */
+div:has(.gh-icon-hook) {
+  margin: 16px 0 !important;
+  color: var(--fg, #24292f);
+  font-size: 14px; /* GFM uses slightly smaller font for alerts */
+  line-height: 1.5;
+}
+
+/* 2. Style the Title Line */
+div:has(.gh-icon-hook) > span:first-child {
+  display: inline-flex !important;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* 3. The Icon Alignment Fix */
 .gh-icon-hook ~ span img,
 .gh-icon-hook ~ img {
-  transform: translateY(3px); /* Nudges the icon down! Increase to 4px or 5px if needed */
+  transform: translateY(2px); /* Pixel-perfect nudge for HTML */
 }
+
+/* 4. Fix Body Paragraph Spacing */
+div:has(.gh-icon-hook) p {
+  margin: 0;
+}
+div:has(.gh-icon-hook) p + p {
+  margin-top: 10px; /* Space between multiple paragraphs */
+}
+
+/* =========================================
+   DARK MODE COLORS (Official GFM Palette)
+   Typst's inline colors look great in Light mode. 
+   In Dark Mode, we must brighten them!
+========================================= */
+
+[data-theme="dark"] div:has(.gh-icon-hook) {
+  color: var(--fg, #c9d1d9); /* Light gray body text */
+}
+
+/* NOTE (Blue) */
+[data-theme="dark"] div:has(.gh-alert-note) { border-left-color: #2f81f7 !important; }
+[data-theme="dark"] div:has(.gh-alert-note) > span:first-child { color: #2f81f7 !important; }
+
+/* TIP (Green) */
+[data-theme="dark"] div:has(.gh-alert-tip) { border-left-color: #3fb950 !important; }
+[data-theme="dark"] div:has(.gh-alert-tip) > span:first-child { color: #3fb950 !important; }
+
+/* IMPORTANT (Purple) */
+[data-theme="dark"] div:has(.gh-alert-important) { border-left-color: #a371f7 !important; }
+[data-theme="dark"] div:has(.gh-alert-important) > span:first-child { color: #a371f7 !important; }
+
+/* WARNING (Yellow) */
+[data-theme="dark"] div:has(.gh-alert-warning) { border-left-color: #d29922 !important; }
+[data-theme="dark"] div:has(.gh-alert-warning) > span:first-child { color: #d29922 !important; }
+
+/* CAUTION (Red) */
+[data-theme="dark"] div:has(.gh-alert-caution) { border-left-color: #f85149 !important; }
+[data-theme="dark"] div:has(.gh-alert-caution) > span:first-child { color: #f85149 !important; }
+
+/* QUOTE (Gray) */
+[data-theme="dark"] div:has(.gh-alert-quote) { border-left-color: #8b949e !important; }
+[data-theme="dark"] div:has(.gh-alert-quote) > span:first-child { color: #8b949e !important; }
