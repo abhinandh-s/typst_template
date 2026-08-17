@@ -6,7 +6,7 @@
   max-width: var(--content-max-width);
 
   padding-top: 20px;
-  border-top: 1px solid var(--table-border-color);
+  border-top: 1px solid var(--accent);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -22,8 +22,8 @@
   box-sizing: border-box;
   width: 100%;
   padding: 10px;
-  border: 1px solid var(--theme-popup-border);
-  background-color: var(--theme-popup-bg);
+  border: 1px solid var(--accent);
+  background-color: var(--secondary-bg);
   color: var(--fg);
   border-radius: 5px;
   font-family: inherit;
