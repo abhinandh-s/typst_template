@@ -1,6 +1,3 @@
-// gfm.typ
-
-// Notice we now accept 'bg-color' directly instead of trying to lighten the accent-color
 #let github-alert(title, icon-file, accent-color, bg-color, body) = {
   block(
     width: 100%,
@@ -10,7 +7,6 @@
     radius: (right: 3pt),
     [
       #text(fill: accent-color, weight: "bold")[
-        // Apply sizing directly to the image so the HTML compiler sees it!
         #box(baseline: 0.25em)[#image(icon-file, width: 1.1em, height: 1.1em)] 
         #h(0.3em) #title
       ]
