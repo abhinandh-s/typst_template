@@ -31,18 +31,25 @@
   #html.script(src: "js/sidebar.js")
   #html.script(src: "js/theme.js")
   #html.script(src: "js/comment-box.js")
-
-  // Google Material Symbols
-  #html.elem("link", attrs: (
-    rel: "stylesheet", 
-    href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0"
-  ))
+  // Google Material Symbols font link removed since we are 100% SVG now!
 ]
 
-#let icon-menu = html.elem("span", attrs: (class: "material-symbols-outlined"))[menu]
-#let icon-palette = html.elem("span", attrs: (class: "material-symbols-outlined"))[palette]
+#let icon-menu = html.elem("svg", attrs: (
+  xmlns: "http://www.w3.org/2000/svg", 
+  viewBox: "0 0 640 640",
+  class: "svg-icon"
+))[
+  #html.elem("path", attrs: (d: "M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z"))[]
+]
 
-// Extracted the SVG so it doesn't clutter the UI layout
+#let icon-palette = html.elem("svg", attrs: (
+  xmlns: "http://www.w3.org/2000/svg", 
+  viewBox: "0 0 640 640",
+  class: "svg-icon"
+))[
+  #html.elem("path", attrs: (d: "M512.5 74.3L291.1 222C262 241.4 243.5 272.9 240.5 307.3C302.8 320.1 351.9 369.2 364.8 431.6C399.3 428.6 430.7 410.1 450.1 381L597.7 159.5C604.4 149.4 608 137.6 608 125.4C608 91.5 580.5 64 546.6 64C534.5 64 522.6 67.6 512.5 74.3zM320 464C320 402.1 269.9 352 208 352C146.1 352 96 402.1 96 464C96 467.9 96.2 471.8 96.6 475.6C98.4 493.1 86.4 512 68.8 512L64 512C46.3 512 32 526.3 32 544C32 561.7 46.3 576 64 576L208 576C269.9 576 320 525.9 320 464z"))[]
+]
+
 #let icon-pdf = html.elem("svg", attrs: (
   xmlns: "http://www.w3.org/2000/svg", 
   viewBox: "0 0 640 640",
@@ -74,7 +81,6 @@
   #external-assets
   #top-bar-nav
 ]
-
 
 #let html-page(filename, page-title, body) = {
   document(filename, title: page-title)[
