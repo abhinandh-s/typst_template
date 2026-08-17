@@ -3,7 +3,7 @@
   color-scheme: dark; 
   --bg: #0B0706;
   --fg: #bcbdd0;
-  --secondary-bg: #45475a;
+  --secondary-bg: #181010;
   --sidebar-bg: #181010;
   --sidebar-fg: #c8c9db;
   --accent: #e05060;
@@ -28,7 +28,7 @@
   color-scheme: light;
   --bg: #eff1f5;
   --fg: #4c4f69;
-  --secondary-bg: #bcc0cc;
+  --secondary-bg: #fafafa;
   --sidebar-bg: #fafafa;
   --sidebar-fg: #a1adb8;
   --accent: #d20f39;
