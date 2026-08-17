@@ -1,7 +1,7 @@
 = Foreword
 
 #import "gfm.typ": note, tip, warning
-#import "/gfm.typ"
+#import "gfm.typ"
 
 = Getting Started
 
