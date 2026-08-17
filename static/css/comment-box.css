@@ -6,7 +6,7 @@
   max-width: var(--content-max-width);
 
   padding-top: 20px;
-  border-top: 1px solid var(--accent);
+  border-top: 1px solid var(--fg);
   display: flex;
   flex-direction: column;
   gap: 10px;
