@@ -9,6 +9,7 @@
   #html.elem("link", attrs: (rel: "stylesheet", href: "css/style.css"))
   #html.script(src: "js/sidebar.js")
   #html.script(src: "js/theme.js")
+  #html.script(src: "js/comment-box.js")
   
   // Google Material Symbols
   #html.elem("link", attrs: (
@@ -111,6 +112,8 @@ This guide also exists as a
 #asset("css/variables.css", read("/static/css/variables.css"))
 #asset("css/base.css", read("/static/css/base.css"))
 #asset("css/components.css", read("/static/css/components.css"))
+#asset("css/comment-box.css", read("/static/css/comment-box.css"))
 #asset("js/theme.js", read("/static/js/theme.js")) 
 #asset("js/sidebar.js", read("/static/js/sidebar.js")) 
+#asset("js/comment-box.js", read("/static/js/comment-box.js")) 
 #asset("favicon.ico", read("/images/favicon.ico", encoding: none))
