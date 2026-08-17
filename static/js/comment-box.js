@@ -1,7 +1,7 @@
 // configuration
 const CONFIG = {
   apiUrl: "https://delibird.abhinandh-s.deno.net/api/comment",
-  containerSelector: "#mdbook-content" // right after page navigation
+  containerSelector: "#content" // right after page navigation
 };
 
 // API functions
