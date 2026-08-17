@@ -1,7 +1,7 @@
 // configuration
 const CONFIG = {
   apiUrl: "https://delibird.abhinandh-s.deno.net/api/comment",
-  containerSelector: "#content" // right after page navigation
+  containerSelector: "body" // we can't use #content cuz of footnotes 
 };
 
 // API functions
