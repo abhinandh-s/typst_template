@@ -11,7 +11,7 @@
     [
       #text(fill: accent-color, weight: "bold")[
         // Apply sizing directly to the image so the HTML compiler sees it!
-        #box(baseline: 20%)[#image(icon-file, width: 1.1em, height: 1.1em)] 
+        #box(baseline: 0.25em)[#image(icon-file, width: 1.1em, height: 1.1em)] 
         #h(0.3em) #title
       ]
       #v(0.5em, weak: true)
