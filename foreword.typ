@@ -22,3 +22,8 @@ Welcome to the first chapter of the book.
 
 #include "copyright.typ"
 
+
+@harry
+
+#bibliography("bibliography.yml")
+
