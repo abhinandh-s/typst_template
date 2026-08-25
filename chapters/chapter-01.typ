@@ -1,6 +1,15 @@
 
 = Syntax
 
+#divider()
+
+= NF Symbols
+
+\uf36f
+
+#divider ()
+
+
 == Highlight
 
 This is #highlight[important].
