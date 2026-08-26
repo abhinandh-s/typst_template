@@ -159,6 +159,11 @@ This guide also exists as a
   #nav(<ch1>, none)
 ] <ch2>
 
+#html-page("rating.html", [Rating])[
+  #include "rating.typ"
+  #nav(<ch1>, none)
+] <ch2>
+
 #document("ag.pdf", title: [Full Book])[
   #set page(paper: "a4", margin: 2.5cm)
   #set text(size: 11pt)
