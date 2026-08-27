@@ -7,7 +7,6 @@
       viewBox: "0 0 " + hw + " " + hw,
       height: hw,
       width: hw,
-      fill: fill,
     ))[
       #html.elem("defs")[
         #html.elem("linearGradient", attrs: (id: "grad"))[
@@ -21,7 +20,12 @@
         ))
       ]
       ]
-      #html.elem("path", attrs: (d: path, fill="url(#grad)"))[]
+      #html.elem("path", attrs: (
+        d: path, 
+        fill: "url(#grad)"),
+        stroke: fill,
+        stroke-width: "1.5",
+      )[]
     ]
   } else {
      image(bytes(
