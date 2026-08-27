@@ -1,5 +1,6 @@
 #let octicon(path, hw: "24", fill: "currentColor", frac: 1.0) = context {
    let percent = str(calc.round(frac * 100, digits: 1)) + "%"
+   let grad-id = "grad-" + percent
 
   if target() == "html" {
     html.elem("svg", attrs: (
@@ -9,7 +10,7 @@
       width: hw,
     ))[
       #html.elem("defs")[
-        #html.elem("linearGradient", attrs: (id: "grad"))[
+        #html.elem("linearGradient", attrs: (id: grad-id))[
           #html.elem("stop", attrs: (
           offset: percent,
           "stop-color": fill,
@@ -22,7 +23,7 @@
       ]
       #html.elem("path", attrs: (
         d: path, 
-        fill: "url(#grad)",
+        fill: "url(#" + grad-id + ")",
         stroke: fill,
         "stroke-width": "1.5",
       ), 
@@ -32,13 +33,13 @@
      image(bytes(
       "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 " + hw + " " + hw + "\">
     <defs>
-      <linearGradient id=\"grad\">
+      <linearGradient id=\"" + grad-id + "\">
         <stop offset=\"" + percent + "\" stop-color=\"" + fill + "\"/>
         <stop offset=\"" + percent + "\" stop-color=\"transparent\"/>
       </linearGradient>
     </defs>
     <!-- We draw the solid path, add a stroke for the outline, and fill it with the gradient -->
-    <path d=\"" + path + "\" fill=\"url(#grad)\" stroke=\"" + fill + "\" stroke-width=\"1.5\" />
+    <path d=\"" + path + "\" fill=\"url(#" + grad-id + ")\" stroke=\"" + fill + "\" stroke-width=\"1.5\" />
   </svg>"
     ), format: "svg", width: 1.1em, height: 1.1em)
   }
