@@ -6,8 +6,8 @@
     html.elem("svg", attrs: (
       xmlns: "http://www.w3.org/2000/svg",
       viewBox: "0 0 " + hw + " " + hw,
-      height: hw,
-      width: hw,
+      height: "1.1em",
+      width: "1.1em",
     ))[
       #html.elem("defs")[
         #html.elem("linearGradient", attrs: (id: grad-id))[
