@@ -21,7 +21,7 @@
         ))
       ]
       ]
-      #html.elem("path", attrs: (d: path))[]
+      #html.elem("path", attrs: (d: path, fill="url(#grad)"))[]
     ]
   } else {
      image(bytes(
