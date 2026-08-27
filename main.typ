@@ -164,7 +164,7 @@ This guide also exists as a
   #nav(<ch2>, none)
 ] <rating>
 
-#document("ag.pdf", title: [Full Book])[
+#document("book.pdf", title: [Full Book])[
   #set page(paper: "a4", margin: 2.5cm)
   #set text(size: 11pt)
 
