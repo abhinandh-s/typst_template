@@ -156,13 +156,13 @@ This guide also exists as a
 
 #html-page("chapter-02.html", [Chapter 2])[
   #include "chapters/chapter-02.typ"
-  #nav(<ch1>, none)
+  #nav(<ch1>, <rating>)
 ] <ch2>
 
 #html-page("rating.html", [Rating])[
   #include "rating.typ"
-  #nav(<ch1>, none)
-] <ch2>
+  #nav(<ch2>, none)
+] <rating>
 
 #document("ag.pdf", title: [Full Book])[
   #set page(paper: "a4", margin: 2.5cm)
