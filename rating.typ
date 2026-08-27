@@ -22,9 +22,10 @@
       ]
       #html.elem("path", attrs: (
         d: path, 
-        fill: "url(#grad)"),
+        fill: "url(#grad)",
         stroke: fill,
-        stroke-width: "1.5",
+        "stroke-width": "1.5",
+      ), 
       )[]
     ]
   } else {
