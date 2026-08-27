@@ -164,7 +164,7 @@ This guide also exists as a
   #nav(<ch2>, none)
 ] <rating>
 
-#document("book.pdf", title: [Full Book])[
+#document("ag.pdf", title: [Full Book])[
   #set page(paper: "a4", margin: 2.5cm)
   #set text(size: 11pt)
 
@@ -180,6 +180,7 @@ This guide also exists as a
   #include "foreword.typ"
   #include "chapters/chapter-01.typ"
   #include "chapters/chapter-02.typ"
+  #include "rating.typ"
 ] <book-pdf>
 
 // Export these into the output bundle
